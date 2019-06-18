@@ -1,0 +1,1027 @@
+function star(start){
+	var star = new Sprite("sb/star.png");
+	
+		star.move(start,rand(0,1366),rand(0,768));
+		star.scale(start-234,start, 0.001, 0.5);
+		star.scale(start,start+243, 0.5, 0.001);
+		star.fade(start+12,100);
+		
+}
+
+function fadein(char,start,end, x, y){
+
+var symbol = new Sprite(char, Foreground);
+
+	symbol.move(start,end,x,y,x,y);
+	symbol.scale(start,0.4);
+	symbol.fade(start-150,start,0.001,1);
+	symbol.fade(end-150,end,1,0);
+	
+	}
+
+function fadedown(char,start,end, x, y){
+
+var symbol = new Sprite(char, Foreground);
+
+	symbol.move(start,end,x,y,x,y+40);
+	symbol.scale(start-150,start,0.001,0.4);
+	symbol.scale(end-150,end,0.4,0.001);
+	
+	}
+	
+function fadedown2(char,start,end, x, y){
+
+var symbol = new Sprite(char, Foreground);
+
+	symbol.move(start,end,x,y,x,y+20);
+	symbol.scale(start-150,start,0.001,0.4);
+	symbol.scale(end-150,end,0.4,0.001);
+	
+	}
+function fadeup(char,start,end, x, y){
+
+var symbol = new Sprite(char, Foreground);
+
+	symbol.move(start,end,x,y,x,y-40);
+	symbol.scale(start-150,start,0.001,0.4);
+	symbol.scale(end-150,end,0.4,0.001);
+	
+	}
+	
+function fadeup2(char,start,end, x, y){
+
+var symbol = new Sprite(char, Foreground);
+
+	symbol.move(start,end,x,y,x,y-10);
+	symbol.scale(start-150,start,0.001,0.4);
+	symbol.scale(end-150,end,0.4,0.001);
+	
+	}
+	
+function fadeup3(char,start,end, x, y){
+
+var symbol = new Sprite(char, Foreground);
+
+	symbol.move(start,end,x,y,x,y-50);
+	symbol.scale(start-150,start,0.001,0.4);
+	symbol.scale(end-150,end,0.4,0.001);
+	
+	}
+fadedown("sb/font/ki.png",1044,2987,550,120);
+fadedown("sb/font/bun.png",1044,2987,550,155);
+fadedown("sb/font/shi.png",1044,2987,550,190);
+fadedown("sb/font/dai.png",1044,2987,550,225);
+fadedown("sb/font/de.png",1044,2987,550,260);
+fadedown("sb/font/su.png",1044,2987,550,298);
+fadedown("sb/font/boku.png",1044,2987,550,330);
+fadedown("sb/font/wa.png",1044,2987,550,365);
+
+fadedown("sb/font/teki.png",3149,5420,540,120);
+fadedown("sb/font/wo.png",3149,5420,540,155);
+fadedown("sb/font/erabe.png",3149,5420,540,190);
+fadedown("sb/font/n.png",3149,5420,540,225);
+fadedown("sb/font/de.png",3149,5420,540,260);
+fadedown2("sb/font/tatakau.png",4447,5420,490,190+35+35);
+fadedown2("sb/font/u.png",4447,5420,490,225+35+35);
+fadedown2("sb/font/shou.png",4447,5420,490,260+35+35);
+fadedown2("sb/font/nen.png",4447,5420,490,295+35+35);
+
+fadedown("sb/font/kana.png",5744,8176,550,110);
+fadedown("sb/font/e.png",5744,8176,550,110+35);
+fadedown("sb/font/ta.png",5744,8176,550,110+70);
+fadedown("sb/font/i.png",5744,8176,550,110+105);
+fadedown("sb/font/mi.png",5744,8176,550,110+140);
+fadedown("sb/font/rai.png",5744,8176,550,110+175);
+fadedown("sb/font/na.png",5744,8176,550,320);
+fadedown("sb/font/ku.png",5744,8176,550,320+35);
+fadedown("sb/font/te.png",5744,8176,550,320+70);
+
+fadedown("sb/font/yume.png",8338,10933,530,120);
+fadedown("sb/font/ni.png",8338,10933,530,155);
+fadedown("sb/font/kaku.png",8338,10933,530,190);
+fadedown("sb/font/ka.png",8338,10933,530,225);
+fadedown("sb/font/re.png",8338,10933,530,260);
+fadedown("sb/font/ru.png",8338,10933,530,295);
+fadeup("sb/font/no.png",8338,10933,490,295-35);
+fadeup("sb/font/wo.png",8338,10933,490,295);
+fadeup("sb/font/matte.png",8338,10933,490,295+70-35);
+fadeup("sb/font/smalltsu.png",8338,10933,490,295+70);
+fadeup("sb/font/te.png",8338,10933,490,295+70+35);
+fadeup("sb/font/ta.png",8338,10933,490,295+70+70);
+
+fadedown("sb/font/so.png",11095,13365,560,100);
+fadedown("sb/font/no.png",11095,13365,560,135);
+fadedown("sb/font/ku.png",11095,13365,560,170);
+fadedown("sb/font/se.png",11095,13365,560,205);
+fadedown("sb/font/mi.png",11095,13365,560,240);
+fadedown("sb/font/rai.png",11095,13365,560,275);
+fadedown("sb/font/kowa.png",11095,13365,560,310);
+fadedown("sb/font/ku.png",11095,13365,560,310+35);
+fadedown("sb/font/te.png",11095,13365,560,310+35+35);
+
+
+fadeup("sb/font/ashi.png",13528,15960,540,230-50);
+fadeup("sb/font/ta2.png",13528,15960,540,265-50);
+fadeup("sb/font/wo.png",13528,15960,540,300-50);
+fadeup("sb/font/kira.png",13528,15960,540,335-50);
+fadeup("sb/font/smalltsu.png",13528,15960,540,370-50);
+fadeup("sb/font/te.png",13528,15960,540,405-50);
+
+fadedown2("sb/font/ka2.png",14663,15960,490,250);
+fadedown2("sb/font/ko.png",14663,15960,490,285);
+fadedown2("sb/font/ni.png",14663,15960,490,320);
+fadedown2("sb/font/nega.png",14663,15960,490,355);
+fadedown2("sb/font/smalltsu.png",14663,15960,490,390);
+fadedown2("sb/font/te.png",14663,15960,490,425);
+
+
+
+
+
+fadedown2("sb/font/mo.png",15960,16609,560,100);
+fadedown2("sb/font/u.png",15960,16609,560,135);
+fadeup3("sb/font/ika.png",16447,17906,520,180);
+fadeup3("sb/font/nan.png",16447,17906,520,215);
+fadeup3("sb/font/shi2.png",16447,17906,520,215+35);
+fadeup3("sb/font/yo.png",16447,17906,520,215+70);
+fadeup3("sb/font/mo.png",16447,17906,520,215+105);
+fadeup3("sb/font/na.png",16447,17906,520,355);
+fadeup3("sb/font/na2.png",16447,17906,520,215+175);
+fadeup3("sb/font/smalltsu.png",16447,17906,520,215+210);
+fadeup3("sb/font/te.png",16447,17906,520,215+245);
+
+fadedown("sb/font/sake.png",17906,18879,560,150);
+fadedown("sb/font/bu.png",17906,18879,560,185);
+fadedown("sb/font/n.png",17906,18879,560,220);
+fadedown("sb/font/da.png",17906,18879,560,255);
+
+fadein("sb/font/ashi.png",19041,19516,550,110);
+fadein("sb/font/ta2.png",19041,19516,550,145);
+fadein("sb/font/yo.png",19041,19516,550,180);
+
+fadein("sb/font/ashi.png",19690,20206,500,250);
+fadein("sb/font/ta2.png",19690,20206,500,285);
+fadein("sb/font/yo.png",19690,20206,500,320);
+
+fadeup3("sb/font/mo.png",20338,21474,550,130);
+fadeup3("sb/font/u.png",20338,21474,550,165);
+fadeup3("sb/font/rai.png",20338,21474,550,200);
+fadeup3("sb/font/na2.png",20338,21474,550,200+35);
+fadeup3("sb/font/i.png",20338,21474,550,200+75);
+fadeup3("sb/font/de.png",20338,21474,550,200+105);
+fadeup3("sb/font/yo.png",20338,21474,550,305+35);
+fadeup3("sb/font/smalltsu.png",20338,21474,550,305+70);
+fadeup3("sb/font/te.png",20338,21474,550,305+105);
+
+
+function realfade(char, start,end, x,y, speed){
+var symbol = new Sprite(char, Foreground);
+
+	symbol.move(start,end,x,y,x+speed,y);
+	symbol.fade(start-100,start+100,0.1,0.8);
+	symbol.scale(start,0.6);
+	symbol.fade(end-100,end+100,0.8,0);
+
+
+}
+realfade("sb/font/so.png",21798,24393,200,190, 20);
+realfade("sb/font/n.png",21798,24393,250,190, 20);
+realfade("sb/font/na2.png",21798,24393,300,190,20);
+
+realfade("sb/font/boku.png",23095,25690,350,260,-20);
+realfade("sb/font/wo.png",23095,25690,400,260,-20);
+realfade("sb/font/oku.png",23095,25690,450,260,-20);
+realfade("sb/font/i.png",23095,25690,500,260,-20);
+realfade("sb/font/de.png",23095,25690,550,260,-20);
+
+realfade("sb/font/tsuki.png",24555,26663,200,330,20);
+realfade("sb/font/wa.png",24555,26663,250,330,20);
+realfade("sb/font/shizu.png",24555,26663,300,330,20);
+realfade("sb/font/mi.png",24555,26663,350,330,20);
+
+realfade("sb/font/hi.png",25852,27955,350,390,-20);
+realfade("sb/font/wa.png",25852,27955,400,390,-20);
+realfade("sb/font/nobo.png",25852,27955,450,390,-20);
+realfade("sb/font/ru.png",25852,27955,500,390,-20);
+
+realfade("sb/font/ke.png",26825,29257,100,240,30);
+realfade("sb/font/do.png",26825,29257,150,240,30);
+realfade("sb/font/so.png",26825,29257,200,240,30);
+realfade("sb/font/no.png",26825,29257,250,240,30);
+realfade("sb/font/yo2.png",26825,29257,300,240,30);
+realfade("sb/font/wa.png",26825,29257,350,240,30);
+
+realfade("sb/font/chiga.png",28122,29257,350,320,-10);
+realfade("sb/font/smalltsu.png",28122,29257,400,320,-10);
+realfade("sb/font/ta.png",28122,29257,450,320,-10);
+realfade("sb/font/n.png",28122,29257,500,320,-10);
+realfade("sb/font/da.png",28122,29257,550,320,-10);
+
+realfade("sb/font/kimi.png",29260,34122,200,150,-10);
+realfade("sb/font/wa.png",29260,34122,250,150,-10);
+
+realfade("sb/font/boku.png",30888,34122,300,200,-7);
+
+realfade("sb/font/no.png",32014,34122,350,250,-5);
+realfade("sb/font/te2.png",32176,34122,400,250,-4);
+realfade("sb/font/wo.png",32338,34122,450,250,-3);
+
+
+function chorusup(char,start,middle,x,y, speed,scaler ){
+
+var symbol = new Sprite(char, Foreground);
+
+	symbol.move(start,middle,x,y,x,y+speed);
+	symbol.scale(start-150,start,0.001,scaler);
+	symbol.scale(start,scaler);
+	symbol.move(middle,middle+2594,x,y+speed,x+rand(-30,30),y+rand(-100,-40));
+	symbol.scaleVec(middle,middle+1297,1,1,-0.75,0.75);
+	symbol.scaleVec(middle+1297,middle+2594,-0.75,0.75,0.5,0.5);
+	symbol.fade(middle+2594-2000,middle+2100,1,0);
+
+}
+
+chorusup1("sb/font/sora.png",34447,35095,37041,150,140,-15, 0.5);
+chorusup1("sb/font/he.png",34447,35095,37041,150,180,-15,0.5);
+chorusup1("sb/font/mau.png",34447,35095,37041,150,220,-15,0.5);
+chorusup1("sb/font/u.png",34447,35095,37041,150,260,-15,0.5);
+
+
+chorusup("sb/font/se2.png",35744,38338,300,240,-20,0.6);
+chorusup("sb/font/kai.png",35744,38338,300,285,-20,0.6);
+chorusup("sb/font/no.png",35744,38338,300,330,-20,0.6);
+chorusup("sb/font/a.png",35744,38338,300,375,-20,0.6);
+chorusup("sb/font/chi.png",35744,38338,300,420,-20,0.6);
+
+chorusup("sb/font/yami.png",37690,40290,480,140,-30,0.5);
+chorusup("sb/font/wo.png",37690,40290,480,180,-30,0.5);
+chorusup("sb/font/te3.png",37690,40290,480,220,-30,0.5);
+chorusup("sb/font/ra.png",37690,40290,480,260,-30,0.5);
+chorusup("sb/font/su2.png",37690,40290,480,300,-30,0.5);
+chorusup("sb/font/sakigake.png",37690,40290,480,340,-30,0.5);
+chorusup("sb/font/sei.png",37690,40290,480,380,-30,0.5);
+
+chorusup("sb/font/bracket1.png",40933,42879,100,150,-10,0.5);
+chorusup("sb/font/kimi.png",40933,42879,140,150,-10,0.5);
+chorusup("sb/font/to.png",40933,42879,180,150,-10,0.5);
+chorusup("sb/font/boku.png",40933,42879,220,150,-10,0.5);
+chorusup("sb/font/mo.png",40933,42879,260,150,-10,0.5);
+chorusup("sb/font/sa.png",40933,42879,300,150,-10,0.5);
+chorusup("sb/font/comma.png",40933,42879,340,150,-10,0.5);
+
+chorusup("sb/font/ma.png",42555,44501,140,220,-10,0.5);
+chorusup("sb/font/ta.png",42555,44501,180,220,-10,0.5);
+chorusup("sb/font/ashi.png",42555,44501,220,220,-10,0.5);
+chorusup("sb/font/ta2.png",42555,44501,260,220,-10,0.5);
+chorusup("sb/font/he.png",42555,44501,300,220,-10,0.5);
+chorusup("sb/font/muka.png",42555,44501,340,220,-10,0.5);
+chorusup("sb/font/ka.png",42555,44501,380,220,-10,0.5);
+chorusup("sb/font/smalltsu.png",42555,44501,420,220,-10,0.5);
+chorusup("sb/font/te.png",42555,44501,460,220,-10,0.5);
+chorusup("sb/font/i.png",42555,44501,500,220,-10,0.5);
+chorusup("sb/font/ko2.png",42555,44501,540,220,-10,0.5);
+chorusup("sb/font/u.png",42555,44501,580,220,-10,0.5);
+chorusup("sb/font/bracket2.png",42555,44501,620,220,-10,0.5);
+
+chorusup("sb/font/yume.png",44825,47420,100,220,-10,0.7);
+chorusup("sb/font/de.png",44825,47420,100,270,-10,0.7);
+chorusup("sb/font/o2.png",44825,47420,100,320,-10,0.7);
+chorusup("sb/font/smalltsu.png",46122,47420,100,360,-6,0.7);
+chorusup("sb/font/te.png",46122,47420,100,410,-6,0.7);
+
+chorusup("sb/font/shi2.png",46609,49041,160,370,-20,0.6);
+chorusup("sb/font/ma2.png",46609,49041,200,370,-20,0.6);
+chorusup("sb/font/u.png",46609,49041,240,370,-20,0.6);
+chorusup("sb/font/no.png",46609,49041,280,370,-20,0.6);
+chorusup("sb/font/na2.png",46609,49041,330,370,-20,0.6);
+chorusup("sb/font/ra.png",46609,49041,370,370,-20,0.6);
+chorusup("sb/font/ba.png",46609,49041,410,370,-20,0.6);
+
+
+
+
+
+
+chorusup("sb/font/ki2.png",48068,50501,520,120,-10,0.5);
+chorusup("sb/font/nou.png",48068,50501,520,160,-10,0.5);
+chorusup("sb/font/wo.png",48068,50501,520,200,-10,0.5);
+chorusup("sb/font/kae.png",48555,50501,520,240,-7,0.5);
+chorusup("sb/font/e.png",48555,50501,520,280,-7,0.5);
+chorusup("sb/font/sa.png",48555,50501,520,320,-7,0.5);
+chorusup("sb/font/se.png",48555,50501,520,360,-7,0.5);
+chorusup("sb/font/te.png",48555,50501,520,400,-7,0.5);
+
+chorusup("sb/font/na2.png",50501,53257,50,120,-8,0.5);
+chorusup("sb/font/n.png",50501,53257,90,120,-8,0.5);
+chorusup("sb/font/de.png",50501,53257,130,120,-8,0.5);
+chorusup("sb/font/iu.png",51149,53257,170,120,-6,0.5);
+chorusup("sb/font/wa2.png",51149,53257,210,120,-6,0.5);
+chorusup("sb/font/na2.png",51149,53257,250,120,-6,0.5);
+chorusup("sb/font/i.png",51149,53257,290,120,-6,0.5);
+chorusup("sb/font/ka.png",51149,53257,330,120,-6,0.5);
+chorusup("sb/font/ra.png",51149,53257,370,120,-6,0.5);
+
+chorusup("sb/font/ma2.png",52771,55690,60,160,-10,0.4);
+chorusup("sb/font/ta.png",52771,55690,60,195,-10,0.4);
+chorusup("sb/font/ashi.png",52771,55690,60,230,-10,0.4);
+chorusup("sb/font/ta2.png",52771,55690,60,265,-10,0.4);
+chorusup("sb/font/mo.png",52771,55690,60,300,-10,0.4);
+chorusup("sb/font/kimi.png",52771,55690,60,335,-10,0.4);
+chorusup("sb/font/to.png",52771,55690,60,370,-10,0.4);
+chorusup("sb/font/ko2.png",52771,55690,60,405,-10,0.4);
+chorusup("sb/font/u.png",52771,55690,60,440,-10,0.4);
+
+
+chorusup("sb/font/ya.png",54393,55690,100,230,-7,0.4);
+chorusup("sb/font/smalltsu.png",54393,55690,100,265,-10,0.4);
+chorusup("sb/font/te.png",54393,55690,100,300,-10,0.4);
+
+realfade("sb/font/wara.png",55041,60393,260,350,0);
+realfade("sb/font/wa2.png",55041,60393,300,350,0);
+realfade("sb/font/se.png",55041,60393,340,350,0);
+realfade("sb/font/te.png",55041,60393,380,350,0);
+
+function cooltop(char, start,end, x,y ,z ,a, speed){
+var symbol = new Sprite(char, Foreground);
+
+
+var rotater = rand(0,360);
+var rot=rand(-2,2);
+	symbol.scale(start-150,start,0.001,0.5);
+	symbol.move(start, end-162, x,y,x,y);
+	symbol.rotate(start,end-162,rotater,rotater+rot);
+	symbol.move(end-162,end,x,y,z,a);
+	symbol.move(end,end+2595-200,z,a,z+speed,a);
+	symbol.rotate(end-162,end,rotater+rot,0);
+	symbol.scaleVec(end+2595-200,end+2595,1,1,1.5,1.5);
+	symbol.rotate(end+2565-200,end+2595,0,rotater);
+	symbol.move(end+2595-200,end+2595,z+speed,a, rand(0,600),rand(0,500));
+	symbol.fade(end+2595-200,end+2595,1,0);
+}
+
+
+cooltop("sb/font/eng/S.png",76771,82933,112,120,140,190,20);
+cooltop("sb/font/eng/o.png",77095,82933,240,360,200,190,20);
+cooltop("sb/font/eng/r.png",77420,82933,150,240,230,190,20);
+cooltop("sb/font/eng/a.png",77744,82933,360,350,350,190,20);
+cooltop("sb/font/eng/G.png",78068,82933,320,120,320,270,-20);
+cooltop("sb/font/eng/b.png",78393,82933,520,420,410,270,-20);
+cooltop("sb/font/eng/y.png",78717,82933,550,140,260,190,20);
+cooltop("sb/font/eng/e.png",79041,82933,100,400,350,270,-20);
+cooltop("sb/font/eng/n.png",79365,82933,450,190,470,270,-20);
+cooltop("sb/font/eng/a.png",79690,82933,300,220,440,270,-20);
+cooltop("sb/font/eng/t.png",80014,82933,510,280,170,190,20);
+cooltop("sb/font/eng/r.png",80338,82933,230,150,380,190,20);
+cooltop("sb/font/eng/l.png",80663,82933,400,440,380,270,-20);
+cooltop("sb/font/eng/a.png",80987,82933,140,360,500,270,-20);
+cooltop("sb/font/eng/d.png",81311,82933,415,80,410,190,20);
+cooltop("sb/font/eng/b.png",81636,82933,40,300,290,190,20);
+cooltop("sb/font/eng/o.png",81960,82933,405,260,320,190,20);
+
+
+
+fadein("sb/font/a2.png",86501,89257,40,80);
+fadein("sb/font/re.png",86501,89257,40,115);
+fadein("sb/font/ka.png",86501,89257,40,150);
+fadein("sb/font/ra.png",86501,89257,40,185);
+fadein("sb/font/se2.png",86501,89257,40,220);
+fadein("sb/font/kai.png",86501,89257,40,255);
+fadein("sb/font/wa.png",87798,89257,80,170);
+fadein("sb/font/ka.png",87798,89257,80,205);
+fadein("sb/font/kae.png",87798,89257,80,240);
+fadein("sb/font/wa2.png",87798,89257,80,275);
+fadein("sb/font/smalltsu.png",87798,89257,80,310);
+fadein("sb/font/ta.png",87798,89257,80,345);
+fadein("sb/font/smalltsu.png",87798,89257,80,380);
+fadein("sb/font/te.png",87798,89257,80,415);
+
+fadein("sb/font/hon.png",89420,91528,120,150);
+fadein("sb/font/ki.png",89420,91528,120,185);
+fadein("sb/font/omo.png",89420,91528,120,220);
+fadein("sb/font/smalltsu.png",90393,91528,120,255);
+fadein("sb/font/ta.png",90393,91528,120,290);
+fadein("sb/font/smalltsu.png",90717,91528,120,325);
+fadein("sb/font/te.png",90717,91528,120,360);
+
+fadein("sb/font/ki2.png",91690,94447,60,100);
+fadein("sb/font/matte.png",91690,94447,60,135);
+fadein("sb/font/shi.png",91690,94447,60,170);
+fadein("sb/font/ta.png",91690,94447,60,205);
+fadein("sb/font/smalltsu.png",91690,94447,60,240);
+fadein("sb/font/te.png",91690,94447,60,275);
+fadein("sb/font/kae.png",92663,94447,100,150);
+fadein("sb/font/e.png",92663,94447,100,185);
+fadein("sb/font/yo.png",92663,94447,100,220);
+fadein("sb/font/u.png",92663,94447,100,255);
+fadein("sb/font/shi.png",92663,94447,100,290);
+fadein("sb/font/ta.png",92663,94447,100,325);
+fadein("sb/font/smalltsu.png",92663,94447,100,360);
+fadein("sb/font/te.png",92663,94447,100,395);
+
+
+fadein("sb/font/mi.png",94609,96393,70,190);
+fadein("sb/font/rai.png",94609,96393,70,225);
+fadein("sb/font/wa.png",94609,96393,70,260);
+fadein("sb/font/zan.png",94609,96393,70,295);
+fadein("sb/font/koku.png",94609,96393,70,330);
+fadein("sb/font/de.png",94609,96393,70,365);
+
+
+
+
+function fadedownoneoff(char,start,middle,end, x, y,speed){
+
+var symbol = new Sprite(char, Foreground);
+
+	symbol.move(start,middle,x,y,x,y);
+	symbol.move(middle,end,x,y,x,y+speed);
+	symbol.fade(start-150,start,0.001,1);
+	symbol.scale(end-150,end,0.4,0.001);
+	
+	}
+	
+
+	
+fadedownoneoff("sb/font/so.png",96555,97203,99636, 550, 110,20);
+fadedownoneoff("sb/font/re.png",96555,97203,99636, 550, 145,20);
+fadedownoneoff("sb/font/de.png",96555,97203,99636, 550, 180,20);
+fadedownoneoff("sb/font/mo.png",96555,97203,99636, 550, 215,20);
+fadedownoneoff("sb/font/i.png",96555,97203,99636, 550, 250,20);
+fadedownoneoff("sb/font/tsu.png",96555,97203,99636, 550, 285,20);
+fadedownoneoff("sb/font/da.png",96555,97203,99636, 550, 320,20);
+fadedownoneoff("sb/font/smalltsu.png",96555,97203,99636, 550, 355,20);
+fadedownoneoff("sb/font/te.png",96555,97203,99636, 550, 390,20);
+
+function fadedownfix(char,start,end, x, y,speed){
+
+var symbol = new Sprite(char, Foreground);
+
+
+	symbol.move(start,end,x,y,x,y+speed);
+	symbol.scale(start-150,start,0.001,0.4);
+	symbol.scale(end-150,end,0.4,0.001);
+	
+	}
+
+fadedownfix("sb/font/kimi.png",98501,99636, 500,90,15);
+fadedownfix("sb/font/to.png",98501,99636, 500,125,15);
+fadedownfix("sb/font/mi3.png",98501,99636, 500,160,15);
+fadedownfix("sb/font/te.png",98501,99636, 500,195,15);
+fadedownfix("sb/font/i.png",98501,99636, 500,230,15);
+fadedownfix("sb/font/ta.png",98501,99636, 500,265,15);
+
+fadedownfix("sb/font/se2.png",99798,102879,570,110,20);
+fadedownfix("sb/font/kai.png",99798,102879,570,145,20);
+fadedownfix("sb/font/hon.png",99798,102879,570,180,20);
+fadedownfix("sb/font/tou.png",99798,102879,570,215,20);
+fadedownfix("sb/font/ni.png",99798,102879,570,250,20);
+fadedownfix("sb/font/ki4.png",101582,102879,570,295,8);
+fadedownfix("sb/font/rei.png",101582,102879,570,330,8);
+fadedownfix("sb/font/da.png",101582,102879,570,365,8);
+fadedownfix("sb/font/smalltsu.png",101582,102879,570,400,8);
+fadedownfix("sb/font/ta.png",101582,102879,570,435,8);
+
+
+fadedownfix("sb/font/wasu.png",103041,107257,500,20,20);
+fadedownfix("sb/font/re.png",103041,107257,500,55,20);
+fadedownfix("sb/font/te.png",103041,107257,500,90,20);
+fadedownfix("sb/font/na2.png",103041,107257,500,125,20);
+fadedownfix("sb/font/i.png",103041,107257,500,160,20);
+fadedownfix("sb/font/sa.png",103041,107257,500,195,20);
+fadedownfix("sb/font/omo.png",104501,107257,550,65,15);
+fadedownfix("sb/font/i.png",104501,107257,550,100,15);
+fadedownfix("sb/font/da2.png",104501,107257,550,135,15);
+fadedownfix("sb/font/se.png",104501,107257,550,170,15);
+fadedownfix("sb/font/ru.png",104501,107257,550,205,15);
+fadedownfix("sb/font/yo.png",104501,107257,550,240,15);
+fadedownfix("sb/font/u.png",104501,107257,550,275,15);
+fadedownfix("sb/font/ni.png",104501,107257,550,310,15);
+fadedownfix("sb/font/mau.png",106112,107257,600,250,8);
+fadedownfix("sb/font/smalltsu.png",106112,107257,600,285,8);
+fadedownfix("sb/font/te.png",106112,107257,600,320,8);
+fadedownfix("sb/font/ru.png",106112,107257,600,355,8);
+fadedownfix("sb/font/no.png",106112,107257,600,390,8);
+
+
+
+
+
+fadedownfix("sb/font/kimi.png",107257,110014,520,80+30,20);
+fadedownfix("sb/font/ga.png",107257,110014,520,115+30,20);
+fadedownfix("sb/font/i.png",107257,110014,520,150+30,20);
+fadedownfix("sb/font/te.png",107257,110014,520,185+30,20);
+fadedownfix("sb/font/mo.png",107257,110014,520,220+30,20);
+fadedownfix("sb/font/i.png",107257,110014,520,255+30,20);	
+fadedownfix("sb/font/na2.png",107257,110014,520,290+30,20);	
+fadedownfix("sb/font/ku.png",107257,110014,520,325+30,20);	
+fadedownfix("sb/font/te.png",107257,110014,520,360+30,20);
+fadedownfix("sb/font/mo.png",107257,110014,520,395+30,20);
+
+
+fadedownfix("sb/font/to2.png",108555,110014,415,330,10);
+fadedownfix("sb/font/be2.png",108555,110014,450,330,10);
+fadedownfix("sb/font/ru.png",108555,110014,485,330,10);
+
+fadedownfix("sb/font/te.png",109203,110014,555,333,6);
+fadedownfix("sb/font/mou.png",109365,110014,590,335,5);
+fadedownfix("sb/font/sou.png",109690,110014,625,338,3);
+
+	
+fadedownfix("sb/font/hito.png",110176,112447,600,80-40,20);
+fadedownfix("sb/font/ri.png",110176,112447,600,115-40,20);
+fadedownfix("sb/font/ji.png",110176,112447,600,150-40,20);
+fadedownfix("sb/font/smallya.png",110176,112447,600,185-40,20);
+fadedownfix("sb/font/aru.png",110176,112447,600,220-40,20);
+fadedownfix("sb/font/ku.png",110176,112447,600,255-40,20);
+fadedownfix("sb/font/ko2.png",111149,112447,600,300-40,12);
+fadedownfix("sb/font/to.png",111149,112447,600,335-40,12);
+fadedownfix("sb/font/sa.png",111149,112447,600,370-40,12);
+fadedownfix("sb/font/e.png",111149,112447,600,405-40,12);
+fadedownfix("sb/font/boku.png",111149,112447,600,440-40,12);
+fadedownfix("sb/font/wa.png",111149,112447,600,475-40,12);
+	
+	
+fadedownfix("sb/font/shi2.png",112609,115203,540,100,22);
+fadedownfix("sb/font/na2.png",112609,115203,540,135,22);	
+fadedownfix("sb/font/i.png",112609,115203,540,170,22);	
+fadedownfix("sb/font/ma2.png",112609,115203,540,205,22);	
+fadedownfix("sb/font/ma2.png",112609,115203,540,240,22);
+fadedownfix("sb/font/test.png",112609,115203,540,275,22);
+fadedownfix("sb/font/iro2.png",112609,115203,540,310,22);
+fadedownfix("sb/font/no.png",112609,115203,540,345,22);
+
+fadedownfix("sb/font/kaze.png",113582,115203,500,205,22);
+fadedownfix("sb/font/ni.png",113582,115203,500,240,22);	
+fadedownfix("sb/font/tsuku.png",113582,115203,500,275,22);
+fadedownfix("sb/font/i.png",113582,115203,500,310,22);		
+fadedownfix("sb/font/ta.png",114393,115203,500,355,11);	
+fadedownfix("sb/font/gen.png",114555,115203,500,393,9);	
+fadedownfix("sb/font/sou.png",114879,115203,500,431,5);	
+
+	
+function fadedownfix1(char,start,end, x, y,speed){
+
+var symbol = new Sprite(char, Foreground);
+
+
+	symbol.move(start,118041,x,y,x,y+speed);
+	symbol.scale(start-150,start,0.001,0.4);
+	symbol.fade(end-450,end,1,0.000);
+	
+	}	
+	
+fadedownfix1("sb/font/kowa2.png",115365,118771,550,110,20);
+fadedownfix1("sb/font/shi2.png",115852,118771,550,150,16);
+fadedownfix1("sb/font/te.png",115852,118771,550,185,16);
+
+fadedownfix1("sb/font/ku.png",116338,118771,550,225,12);
+fadedownfix1("sb/font/re.png",116338,118771,550,260,12);
+fadedownfix1("sb/font/smalltsu.png",116338,118771,550,295,12);
+fadedownfix1("sb/font/te.png",116338,118771,550,330,12);
+fadedownfix1("sb/font/nega.png",116338,118771,550,365,12);
+fadedownfix1("sb/font/smalltsu.png",116338,118771,550,400,12);
+fadedownfix1("sb/font/te.png",116338,118771,550,435,12);
+
+fadedownfix1("sb/font/moga.png",117311,118771,590,265,10);
+fadedownfix1("sb/font/i.png",117311,118771,590,300,10);
+fadedownfix1("sb/font/ta.png",117311,118771,590,335,10);
+fadedownfix1("sb/font/smalltsu.png",117311,118771,590,370,10);
+fadedownfix1("sb/font/te.png",117311,118771,590,405,10);
+	
+function realfadeud(char, start,end, x,y, speed){
+var symbol = new Sprite(char, Foreground);
+
+	symbol.move(start,end,x,y+speed,x,y-speed);
+	symbol.fade(start,start+400,0.1,0.9);
+	symbol.scale(start,0.6);
+	symbol.fade(end-400,end,0.9,0);
+	
+
+}	
+	
+realfadeud("sb/font/nega.png", 120555,121690,150,150, -5);
+realfadeud("sb/font/smalltsu.png", 120555,121690,200,150, 5);	
+realfadeud("sb/font/ta.png", 120555,121690,250,150, -5);	
+realfadeud("sb/font/n.png", 120555,121690,300,150,5);
+realfadeud("sb/font/na2.png", 120555,121690,350,150,-5);	
+realfadeud("sb/font/ra.png", 120555,121690,400,150,5);	
+
+realfadeud("sb/font/kana.png",121690,122987,280,330,-5);	
+realfadeud("sb/font/e.png",121690,122987,330,330,5);
+realfadeud("sb/font/te.png",121690,122987,380,330,-5);	
+realfadeud("sb/font/shi2.png",121690,122987,430,330,5);	
+realfadeud("sb/font/ma.png",121690,122987,480,330,-5);
+realfadeud("sb/font/e.png",121690,122987,530,330,5);
+realfadeud("sb/font/ya.png",121690,122987,580,330,-5);
+
+
+realfade("sb/font/smalltsu.png",123149,123960,295,220,0);
+realfade("sb/font/te.png",123149,123960,345,220,0);
+
+realfade("sb/font/eng/e2.png",124284,125257,295,220,0);
+realfade("sb/font/eng/h2.png",124284,125257,345,220,0);
+
+
+realfade("sb/font/kimi.png",125420,130447,160,200,80);
+realfade("sb/font/wa.png",125420,130447,210,200,80);
+
+realfade("sb/font/iu.png",128014,130447,450,290,-50);
+realfade("sb/font/smalltsu.png",128014,130447,500,290,-50);
+realfade("sb/font/te.png",128014,130447,550,290,-50);
+
+
+function chorusup1(char,start,midle,middle,x,y, speed,scaler){
+
+var symbol = new Sprite(char, Foreground);
+
+	symbol.move(start,midle,x,y,x,y);
+	symbol.move(midle, middle,x,y,x,y+speed);	
+	symbol.fade(start-150,start,0.001,1);
+	symbol.scale(start,scaler);
+	symbol.move(middle,middle+2594,x,y+speed,x+rand(-30,30),y+rand(-100,-40));
+	symbol.scaleVec(middle,middle+1297,1,1,-0.75,0.75);
+	symbol.scaleVec(middle+1297,middle+2594,-0.75,0.75,0.5,0.5);
+	symbol.fade(middle+2594-2000,middle+2100,1,0);
+
+}
+
+chorusup1("sb/font/ma.png",130609,131095,133041,190,140,-25, 0.5);
+chorusup1("sb/font/ta.png",130609,131095,133041,190,180,-25, 0.5);
+chorusup1("sb/font/ashi.png",130609,131095,133041,190,220,-25, 0.5);
+chorusup1("sb/font/nou.png",130609,131095,133041,190,260,-25, 0.5);
+chorusup("sb/font/no.png",132068,133041,190,290,-15, 0.5);
+chorusup("sb/font/yo2.png",132068,133041,190,330,-15, 0.5);
+
+
+chorusup("sb/font/ni.png",133365,136122,500,150,-25, 0.6);
+chorusup("sb/font/au.png",133365,136122,500,200,-25, 0.6);
+chorusup("sb/font/i.png",133365,136122,500,250,-25, 0.6);
+chorusup("sb/font/ni.png",134501,136122,500,285,-15, 0.6);
+chorusup("sb/font/i2.png",134501,136122,500,335,-15, 0.6);
+chorusup("sb/font/ko2.png",134501,136122,500,385,-15, 0.6);
+chorusup("sb/font/u.png",134501,136122,500,435,-15, 0.6);
+
+chorusup("sb/font/to.png",135311,136122,440,300,-10, 0.5);
+chorusup("sb/font/omo.png",135311,136122,440,340,-10, 0.5);
+chorusup("sb/font/u.png",135311,136122,440,380,-10, 0.5);
+chorusup("sb/font/ga.png",135311,136122,440,420,-10, 0.5);
+
+chorusup("sb/font/do.png",136122,137906,80,100,-10, 0.5);
+chorusup("sb/font/u.png",136122,137906,80,140,-10, 0.5);
+chorusup("sb/font/ka.png",136122,137906,80,180,-10, 0.5);
+chorusup("sb/font/na2.png",136122,137906,80,220,-10, 0.5);
+chorusup("sb/font/kimi.png",136771,137906,130,260-50,-10, 0.5);
+chorusup("sb/font/wa.png",136771,137906,130,300-50,-10, 0.5);
+chorusup("sb/font/i.png",136771,137906,130,340-50,-10, 0.5);
+chorusup("sb/font/na2.png",136771,137906,130,380-50,-10, 0.5);
+chorusup("sb/font/i.png",136771,137906,130,420-50,-10, 0.5);
+chorusup("sb/font/ka.png",136771,137906,130,460-50,-10, 0.5);
+chorusup("sb/font/na2.png",136771,137906,130,500-50,-10, 0.5);
+
+
+chorusup("sb/font/so.png",138068,139528,200,150,-15, 0.6);
+chorusup("sb/font/re.png",138068,139528,250,150,-15, 0.6);
+chorusup("sb/font/de.png",138068,139528,300,150,-15, 0.6);
+chorusup("sb/font/mo.png",138068,139528,350,150,-15, 0.6);
+chorusup("sb/font/i.png",138068,139528,400,150,-15, 0.6);
+chorusup("sb/font/tsu.png",138068,139528,450,150,-15, 0.6);
+chorusup("sb/font/ma2.png",138068,139528,500,150,-15, 0.6);
+chorusup("sb/font/de.png",138068,139528,550,150,-15, 0.6);
+chorusup("sb/font/mo.png",138068,139528,600,150,-15, 0.6);
+
+
+
+chorusup("sb/font/boku.png",139528,140825,300,200,-20, 0.5);
+chorusup("sb/font/ra.png",139528,140825,340,200,-20, 0.5);
+chorusup("sb/font/hito2.png",139528,140825,380,200,-20, 0.5);
+chorusup("sb/font/tsu.png",139528,140825,420,200,-20, 0.5);
+chorusup("sb/font/da.png",139528,140825,460,200,-20, 0.5);
+chorusup("sb/font/ka.png",139528,140825,500,200,-20, 0.5);
+
+
+chorusup("sb/font/ma2.png",140825,141311,140,300,-10, 0.5);
+chorusup("sb/font/ta.png",140825,141311,140,340,-10, 0.5);
+chorusup("sb/font/ne.png",140825,141311,140,380,-10, 0.5);
+
+chorusup("sb/font/eng/s.png",141311,144068,190,200,-20, 0.6);
+chorusup("sb/font/eng/k.png",141311,144068,220,200,-20, 0.6);
+chorusup("sb/font/eng/y.png",141311,144068,250,200,-20, 0.6);
+
+chorusup("sb/font/eng/a3.png",142447,144068,310-90,270,-15, 0.6);
+chorusup("sb/font/eng/r.png",142447,144068,340-85,270,-15, 0.6);
+chorusup("sb/font/eng/r.png",142447,144068,370-90,270,-15, 0.6);
+chorusup("sb/font/eng/o.png",142447,144068,400-90,270,-15, 0.6);
+chorusup("sb/font/eng/w.png",142447,144068,430-85,270,-15, 0.6);
+
+
+chorusup("sb/font/wara.png",143744,145609,460,150,-20, 0.5);
+chorusup("sb/font/smalltsu.png",143744,145609,460,190,-20, 0.5);
+chorusup("sb/font/te.png",143744,145609,460,230,-20, 0.5);
+chorusup("sb/font/yo.png",145041,145609,410,250,-10, 0.5);
+chorusup("sb/font/u.png",145041,145609,410,290,-10, 0.5);
+
+chorusup("sb/font/mi.png",145690,147149,150,100,-10, 0.5);
+chorusup("sb/font/rai.png",145690,147149,190,100,-10, 0.5);
+chorusup("sb/font/wo.png",145690,147149,230,100,-10, 0.5);
+chorusup("sb/font/shou.png",146501,147149,270,95,-5, 0.5);
+chorusup("sb/font/shi2.png",146501,147149,310,95,-5, 0.5);
+chorusup("sb/font/te.png",146501,147149,350,95,-5, 0.5);
+chorusup("sb/font/mo.png",146501,147149,390,95,-5, 0.5);
+
+
+chorusup("sb/font/kimi.png",147149,148284,80,130,-10, 0.5);
+chorusup("sb/font/to.png",147149,148284,80,170,-10, 0.5);
+chorusup("sb/font/i.png",147149,148284,80,210,-10, 0.5);
+chorusup("sb/font/ta.png",147149,148284,80,250,-10, 0.5);
+chorusup("sb/font/i.png",147149,148284,80,290,-10, 0.5);
+chorusup("sb/font/ka.png",147149,148284,80,330,-10, 0.5);
+chorusup("sb/font/ra.png",147149,148284,80,370,-10, 0.5);
+
+
+chorusup("sb/font/sake.png",148447,149582,500,120,-10, 0.5);
+chorusup("sb/font/bo.png",148447,149582,500,160,-10, 0.5);
+chorusup("sb/font/u.png",148447,149582,500,200,-10, 0.5);
+chorusup("sb/font/ima.png",148447,149582,500,240,-10, 0.5);
+chorusup("sb/font/nou.png",148447,149582,500,280,-10, 0.5);
+
+
+chorusup("sb/font/no.png",149420,150879,550,160,-10, 0.5);
+chorusup("sb/font/nou.png",149420,150879,550,200,-10, 0.5);
+chorusup("sb/font/wo.png",149420,150879,550,240,-10, 0.5);
+chorusup("sb/font/i.png",149420,150879,550,280,-10, 0.5);
+chorusup("sb/font/tsu.png",149420,150879,550,320,-10, 0.5);
+chorusup("sb/font/ka.png",149420,150879,550,360,-10, 0.5);
+
+chorusup("sb/font/omo.png",150393,150879,490,300,-5, 0.5);
+chorusup("sb/font/i.png",150393,150879,490,340,-5, 0.5);
+chorusup("sb/font/da2.png",150393,150879,490,380,-5, 0.5);
+chorusup("sb/font/se.png",150393,150879,490,420,-5, 0.5);
+
+realfade("sb/font/mi.png",151041,154447,220,290,0);
+realfade("sb/font/rai.png",151041,154447,270,290,0);
+realfade("sb/font/no.png",151041,154447,320,290,0);
+realfade("sb/font/boku.png",151041,154447,370,290,0);
+realfade("sb/font/ra.png",151041,154447,420,290,0);
+
+
+function star_gen(start, n){
+
+for (var i=1; i<=n; i++){
+	star(start);
+	}
+}
+
+function star_gentime(start, n, t ,i){
+
+for (var a=0; a<i; a++){
+	star_gen(start+ t*a, n);
+	}
+}
+
+
+
+function bg_move(){
+var bg2 = new Sprite("sb/bg2.jpg", Background);
+var bgnogirl = new Sprite("sb/bgnogirl.jpg", Background);
+var bgbw = new Sprite("sb/bgnogirlbw.jpg",Background);
+
+var bg = new Sprite("sb/bg.jpg", Background);
+var black = new Sprite("sb/black.jpg", Background);
+
+bg.scale(0.64);
+bgbw.scale(0.64);
+bg2.scale(0.64);
+bg.color(100,100,100);
+bg.color(35095,250,250,250);
+bg.move(0,35095,320,320,320,320);
+bg.moveY(35095,55852,320,158);
+bg.move(55852,80052,320,158,320,158);
+black.move(76447,86987,320,320,320,320);
+black.fade(86501,86987,1,0);
+
+bg.moveY(80095,81852,158,320);
+bgbw.move(81852,97203,320,158,320,158);
+bgnogirl.scale(0.64);
+bgnogirl.moveY(97203,118041,158,320);
+bgnogirl.move(118041,131095,320,320,320,320);
+bgnogirl.color(255,255,255);
+bgnogirl.color(118041,100,100,100);
+
+
+bg2.moveY(131095, 151690,320,158);
+bg2.move(151690,172447,320,158,320,158);
+}
+
+star_gentime(1366, 3, 324, 400);
+bg_move();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

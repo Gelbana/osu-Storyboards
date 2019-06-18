@@ -1,0 +1,1172 @@
+function camera1(pic, rotater, start, middle,end, x,y,z,a, speed){
+
+var image = new Sprite(pic, Background);
+
+image.move(start, middle, x,y,x,y);
+image.move(middle, end, x,y,z,a);
+image.rotate(middle,end,0,rotater);
+image.scale(start,1);
+
+image.scaleVec(1.5,middle,end,1,1,1.8,2.5);
+
+image.move(end,end+2000, z,a,z,a);
+}
+function camera2(pic, rotater, start, middle,end, x,y,z,a, speed){
+
+var image = new Sprite(pic, Foreground);
+
+image.move(start, middle, x,y,x,y);
+image.move(middle, end, x,y,z,a);
+image.rotate(middle,end,0,rotater);
+image.scale(start,1);
+
+image.scaleVec(1.5,middle,end,1,1,1.8,2.5);
+
+image.move(end,end+2000, z,a,z,a);
+}
+
+function camerabg(pic, rotater, start, middle,end, x,y,z,a, speedx, speedy, scaler){
+
+var image = new Sprite(pic, Background);
+
+image.fade(start-90, start, 0,1);
+image.scale(start-50,start,scaler+0.15, scaler);
+image.scale(start,scaler);
+image.move(start-100, middle, x,y,x,y);
+image.move(middle, end, x,y,z,a);
+image.rotate(middle,end,0,rotater);
+image.scale(start,1);
+
+//image.scaleVec(1.5,middle,end,1,1,1.8,2.5);
+
+//image.move(end,end+2000, z,a,z,a);
+}
+
+function camera(pic,inirotater, rotater, start, middle, middle2,end, x,y,z,a,x2,y2, scaler, scaler2){
+
+var image = new Sprite(pic, Foreground);
+
+image.rotate(start,inirotater);
+image.fade(start-90, start, 0,1);
+image.scale(start-50,start,scaler+0.15, scaler);
+image.scale(start,scaler);
+image.move(start-100, middle, x,y,z,a);
+image.move(middle,middle2, z,a,x2,y2); 
+image.rotate(middle,middle2,0,rotater);
+image.scale(start,1);
+image.scale(middle,middle2,scaler,scaler2);
+image.move(middle2,end, x2,y2,x2,y2);
+//image.scaleVec(1.5,middle,end,1,1,1.8,2.5);
+
+//image.move(end,end+2000, z,a,z,a);
+}
+
+function camerab(pic,inirotater, rotater, start, middle, middle2,end, x,y,z,a,x2,y2, scaler, scaler2){
+
+var image = new Sprite(pic, Foreground);
+
+image.rotate(start,inirotater);
+image.scale(start,scaler);
+image.move(start-100, middle, x,y,z,a);
+image.move(middle,middle2, z,a,x2,y2); 
+image.rotate(middle,middle2,inirotater,rotater);
+
+image.scale(middle,middle2,scaler,scaler2);
+image.move(middle2,end, x2,y2,x2,y2);
+//image.scaleVec(1.5,middle,end,1,1,1.8,2.5);
+
+//image.move(end,end+2000, z,a,z,a);
+}
+camera("sb/so.png",0, -1.5708, 31258, 31653,31732,32285, 220,240,220,240 ,160, 350, 0.2, 0.15);
+camera("sb/re.png",0,-1.5708, 31416, 31653,31732,32285, 290,240,290,240, 160, 300, 0.2, 0.15);
+camera("sb/ji.png",0,-1.5708, 31574, 31653,31732,32285, 360,240,360,240, 160, 250, 0.2, 0.15);   
+camera("sb/smallya.png",0, -1.5708, 31574, 31653,31732,32285,430,240,430,240, 160, 200, 0.2, 0.15); 
+campartbg("sb/bg2.png",0,0,29837,31653,320,320,320,320,0.8,0.8,0);
+campartbg("sb/bg2.png",0,-1.5708,31653,31732,320,320,220,320,0.8,0.7,0);
+campartbg("sb/bg2.png",0,0,31732,32285,220,320,220,320,0.7,0.7,0);
+campartbg("sb/red2.jpg",0,0,31732,200285,320,320,320,320,0.9,0.9,0);
+
+
+camera("sb/chi.png",0, 0, 31732, 32285,32323,33153,260,270,260,270, 80, 340, 0.20, 0.15); 
+camera("sb/smallyo.png",0, 0, 31732, 32285,32323,33153,320,270,320,270, 130, 340, 0.20, 0.15);  
+camera("sb/smalltsu.png",0, 0, 31732, 32285,32323,33153,380,270,380,270, 180, 340, 0.2, 0.15);
+camera("sb/to.png",0, 0, 31732, 32285,32323,33153,440,270,440,270, 230, 340, 0.2, 0.15);
+ 
+ 
+camerab("sb/so.png",-1.5708, -1.5708, 32048, 32285,32323,33153, 160, 350,160, 350 ,20, 400, 0.15, 0.10);
+camerab("sb/re.png",-1.5708,-1.5708, 32048, 32285,32323,33153, 160, 300,160, 300, 20, 360, 0.15, 0.10);
+camerab("sb/ji.png",-1.5708,-1.5708, 32048, 32285,32323,33153, 160, 250,160, 250, 20, 320, 0.15, 0.10);   
+camerab("sb/smallya.png",-1.5708, -1.5708, 32048, 32285,32323,33153,160, 200,160, 200, 20, 280, 0.15, 0.10); 
+ 
+campart2("sb/so.png",-1.5708, -1.5708, 33153,33942 , 20, 400,-710,400, 0.10, 0.10,1.5);
+campart2("sb/re.png",-1.5708, -1.5708, 33153,33942 , 20, 360,-710,360, 0.10, 0.10,1.5); 
+campart2("sb/ji.png",-1.5708, -1.5708, 33153,33942 , 20, 320,-710,320, 0.10, 0.10,1.5); 
+campart2("sb/smallya.png",-1.5708, -1.5708, 33153,33942 , 20, 280,-710,280, 0.10, 0.10,1.5);
+
+campart2("sb/chi.png",0,0, 33153,33942 ,    80, 340,-650,340, 0.15, 0.15,1.5);
+campart2("sb/smallyo.png",0,0, 33153,33942 ,130, 340,-600,340, 0.15, 0.15,1.5);
+campart2("sb/smalltsu.png",0,0, 33153,33942 ,180, 340,-550,340, 0.15, 0.15,1.5);
+campart2("sb/to.png",0,0, 33153,33942 ,      230, 340,-500,340, 0.15, 0.15,1.5);
+ 
+ 
+ 
+ function campart(pic,inirotater, rotater, start, end, x,y,z,a, scaler, scaler2 ){
+
+var image = new Sprite(pic, Foreground);
+
+
+image.fade(start-90, start, 0,1);
+image.scale(start-50,start,scaler+0.15, scaler);
+image.rotate(start,inirotater);
+image.scale(start,scaler);
+image.move(start-100, end, x,y,z,a);
+
+image.rotate(start,end,inirotater,rotater);
+
+image.scale(start,end,scaler,scaler2);
+
+}
+
+function campart2(pic,inirotater, rotater, start, end, x,y,z,a, scaler, scaler2, ease ){
+
+var image = new Sprite(pic, Foreground);
+
+
+
+
+image.scale(start,scaler);
+image.move(ease,start, end, x,y,z,a);
+
+image.rotate(start,end,inirotater,rotater);
+
+image.scale(start,end,scaler,scaler2);
+
+}
+function campartbg(pic,inirotater, rotater, start, end, x,y,z,a, scaler, scaler2, ease ){
+
+var image = new Sprite(pic, Background);
+
+
+image.scale(start,scaler);
+image.move(ease,start, end, x,y,z,a);
+
+image.rotate(start,end,inirotater,rotater);
+
+image.scale(start,end,scaler,scaler2);
+
+}
+
+function campart3(pic,inirotater, rotater, start, end, x,y,z,a, scaler, scaler2, ease, r,g,b ){
+
+var image = new Sprite(pic, Foreground);
+
+image.scale(start,scaler);
+image.color(start,r,g,b);
+image.move(ease,start, end, x,y,z,a);
+
+image.rotate(start,end,inirotater,rotater);
+
+image.scale(start,end,scaler,scaler2);
+
+}
+function campartreal(pic,inirotater, rotater, start, end, x,y,z,a, scaler, scaler2,ease, fadein ){
+
+var image = new Sprite(pic, Foreground);
+
+image.fade(start-9000, 0);
+image.fade(fadein-50,fadein,0,1);
+image.scale(fadein-50,fadein,scaler+0.15, scaler);
+image.rotate(start,inirotater);
+image.scale(start,scaler);
+image.move(ease,start, end, x,y,z,a);
+
+image.rotate(start,end,inirotater,rotater);
+
+image.scale(fadein,end,scaler,scaler2);
+
+}
+
+ 
+// campart("sb/omo.png",0, 0, 32363, 33153, 120,180,120,180, 0.3, 0.3);
+ //campart("sb/neku.png",0, 0, 32837, 33153, 240,180,240,180, 0.3, 0.3);
+// campart("sb/ki.png",0, 0, 33153, 33153, 360,180,360,180, 0.3, 0.3);
+ 
+ 
+// campart2("sb/omo.png",0, 0, 33153,33942 , 120,180,-160,180, 0.3, 0.3,1.5);
+// campart2("sb/neku.png",0, 0, 33153,33942 , 240,180,-40,180, 0.3, 0.3,1.5);
+// campart2("sb/ki.png",0, 0, 33153,33942 , 360,180,80,180, 0.3, 0.3,1.5);
+//campart3("sb/de.png",0, 0, 33311, 33942, 480,180,200,180, 0.3, 0.3,1.5,158);
+
+campartreal("sb/omo.png",0, 0, 33153,33942 , 120,180,-160-450,180, 0.3, 0.3,1.5, 32363);
+campartreal("sb/neku.png",0, 0, 33153,33942 , 240,180,-40-450,180, 0.3, 0.3,1.5, 32837);
+campartreal("sb/ki.png",0, 0, 33153,33942 , 360,180,80-450,180, 0.3, 0.3,1.5, 33153);
+campartreal("sb/de.png",0, 0, 33153,33942 , 480,180,200-450,180, 0.3, 0.3,1.5, 33311); 
+campartreal("sb/mo.png",0, 0, 33153,33942 , 600,180,320-450,180, 0.3, 0.3,1.5, 33469); 
+campartreal("sb/shi.png",0, 0, 33153,33942 , 720,180,440-450,180, 0.3, 0.3,1.5, 33627);
+campartreal("sb/ma.png",0, 0, 33153,33942 , 840,180,560-450,180, 0.3, 0.3,1.5, 33785);
+campartreal("sb/shi.png",0, 0, 33153,33942 , 960,180,680-450,180, 0.3, 0.3,1.5, 33942);
+
+
+campart2("sb/mo.png",0,0, 33942,34100 , -130, 180,-130,180, 0.3, 0.3,1.5);
+campart2("sb/shi.png",0,0, 33942,34100 , -10, 180,-10,180, 0.3, 0.3,1.5);
+campart2("sb/ma.png",0,0, 33942,34100 , 110, 180,110,180, 0.3, 0.3,1.5);
+campart2("sb/shi.png",0,0, 33942,34100 , 230, 180,230,180, 0.3, 0.3,1.5);
+
+campartreal("sb/smallyo.png",0, 0, 33942,34100 , 350,180,350,180, 0.3, 0.3,1.5, 33942);
+campartreal("sb/u.png",0, 0, 33942,34100 , 470,180,470,180, 0.3, 0.3,1.5, 33942);
+
+
+campart2("sb/mo.png",0,0, 34100,34179 , -130, 180,-260,100, 0.3, 0.35,0);
+campart2("sb/shi.png",0,0, 34100,34179 , -10,180,-130,100, 0.3, 0.35,0);
+campart2("sb/ma.png",0,0, 34100,34179 , 110,180,0,100, 0.3, 0.35,0);
+campart2("sb/shi.png",0,0, 34100,34179 ,230,180,130,100, 0.3, 0.35,0);
+campart2("sb/smallyo.png",0,0, 34100,34179 , 350,180,260,100, 0.30, 0.35,0);
+campart2("sb/u.png",0,0, 34100,34179 , 470,180,390,100, 0.3, 0.35,0);
+
+campart2("sb/mo.png",0,0, 34179, 35995 , -260, 100,-270,95, 0.35, 0.35,0);
+campart2("sb/shi.png",0,0, 34179, 35995 , -130, 100,-140,95, 0.35, 0.35,0);
+campart2("sb/ma.png",0,0, 34179, 35995 , 0, 100,-10,95, 0.35, 0.35,0);
+campart2("sb/shi.png",0,0, 34179, 35995 , 130, 100,120,95, 0.35, 0.35,0);
+campart2("sb/smallyo.png",0,0, 34179, 35995 , 260, 100,250,95, 0.35, 0.35,0);
+campart2("sb/u.png",0,0, 34179, 35995 , 390, 100,380,95, 0.35, 0.35,0);
+
+
+campartreal("sb/ka.png",0, 0, 34258,35995 , 270,270,260,265, 0.2, 0.2,0, 34258);
+campartreal("sb/smalltsu.png",0, 0, 34258,35995 , 340,270,330,265, 0.2, 0.2,0, 34732);
+campartreal("sb/te.png",0, 0, 34258,35995 , 410,270,400,265, 0.2, 0.2,0, 34732);
+
+
+campartreal("sb/kan.png",0, 0, 34258,35995 , 50,390,40,385, 0.25, 0.25,0, 34890);
+campartreal("sb/ji.png",0, 0, 34258,35995 , 150,390,140,385, 0.25, 0.25,0, 35206);
+campartreal("sb/de.png",0, 0, 34258,35995 , 250,390,240,385, 0.25, 0.25,0, 35363);
+
+
+campart2("sb/mo.png",0,0, 35995, 36153 , -270,95,-270,-365, 0.35, 0.35,0);
+campart2("sb/shi.png",0,0, 35995, 36153 , -140, 95,-140,-365, 0.35, 0.35,0);
+campart2("sb/ma.png",0,0, 35995, 36153 ,-10,95,-10,-365, 0.35, 0.35,0);
+campart2("sb/shi.png",0,0, 35995, 36153 , 120,95,120,-365, 0.35, 0.35,0);
+campart2("sb/smallyo.png",0,0, 36153, 35995 , 250,95,250,-365, 0.35, 0.35,0);
+campart2("sb/u.png",0,0, 35995, 36153 , 380,95,380,-365, 0.35, 0.35,0);
+
+
+campart2("sb/ka.png",0, 0, 35995,36153 , 260,265,260,-195, 0.2, 0.2,0 );
+campart2("sb/smalltsu.png",0, 0, 35995,36153 , 330,265,330,-195, 0.2, 0.2,0 );
+campart2("sb/te.png",0, 0, 35995,36153 , 400,265,400,-195, 0.2, 0.2,0);
+
+
+campart2("sb/kan.png",0, 0, 35995,36153 , 40,385,40,-75, 0.25, 0.25,0);
+campart2("sb/ji.png",0, 0, 35995,36153 , 140,385,140,-75, 0.25, 0.25,0);
+campart2("sb/de.png",0, 0, 35995,36153 , 240,385,240,-75, 0.25, 0.25,0);
+
+
+campart2("sb/phone.png",0, 0, 35995,36153 , 320,830,320,370, 0.25, 0.25,0);
+campart2("sb/phone.png",0, 0, 36153,36232 , 320,370,220,220, 0.25, 0.85,0);
+
+campart2("sb/phone.png",0, 0, 36232,39627 , 220,220,200,220, 0.85, 0.85,0);
+
+campartreal("sb/chi2.png",0, 0, 36311,36390, 620,205,620,205, 0.3, 0.3,0,36311);
+
+campart2("sb/chi2.png",0, 0, 36390,36469, 620,205,510,205, 0.3, 0.3,0);
+campart2("sb/chi2.png",0, 0, 36469,36548, 510,205,510,205, 0.3, 0.3,0);
+campart2("sb/chi2.png",0, 0, 36548,36627, 510,205,400,205, 0.3, 0.3,0);
+campart2("sb/chi2.png",0, 0, 36627,36706, 400,205,400,205, 0.3, 0.3,0);
+campart2("sb/chi2.png",0, 0, 36706,36785, 400,205,290,205, 0.3, 0.3,0);
+campart2("sb/chi2.png",0, 0, 36785,37337, 290,205,285,205, 0.3, 0.3,0);
+campart2("sb/chi2.png",0, 0, 37337,37416, 285,205,175,205, 0.3, 0.3,0);
+campart2("sb/chi2.png",0, 0, 37416,37969, 175,205,170,205, 0.3, 0.3,0);
+campart2("sb/chi2.png",0, 0, 37969,38048, 170,205,50,205, 0.3, 0.3,0);
+campart2("sb/chi2.png",0, 0, 38048,38600, 50,205,45,205, 0.3, 0.3,0);
+campart2("sb/chi2.png",0, 0, 38600,38679, 45,205,-65,205, 0.3, 0.3,0);
+campart2("sb/chi2.png",0, 0, 38679,39232, -65,205,-70,205, 0.3, 0.3,0);
+campart2("sb/chi2.png",0, 0, 39232,39311, -70,205,-70,45, 0.3, 0.3,0);
+campart2("sb/chi2.png",0, 0, 39311,39469, -70,45,-73,45, 0.3, 0.3,0);
+bye("sb/chi2.png",39469,-73,45,0.3,0.001); 
+
+campartreal("sb/ra.png",0, 0, 36469,36548, 620,205,620,205, 0.3, 0.3,0,36469 );
+
+campart2("sb/ra.png",0, 0, 36548,36627, 620,205,510,205, 0.3, 0.3,0);
+campart2("sb/ra.png",0, 0, 36627,36706, 510,205,510,205, 0.3, 0.3,0);
+campart2("sb/ra.png",0, 0, 36706,36785, 510,205,400,205, 0.3, 0.3,0);
+campart2("sb/ra.png",0, 0, 36785,37337, 400,205,395,205, 0.3, 0.3,0);
+campart2("sb/ra.png",0, 0, 37337,37416, 395,205,285,205, 0.3, 0.3,0);
+campart2("sb/ra.png",0, 0, 37416,37969, 285,205,280,205, 0.3, 0.3,0);
+campart2("sb/ra.png",0, 0, 37969,38048, 280,205,160,205, 0.3, 0.3,0);
+campart2("sb/ra.png",0, 0, 38048,38600, 160,205,155,205, 0.3, 0.3,0);
+campart2("sb/ra.png",0, 0, 38600,38679, 155,205,45,205, 0.3, 0.3,0);
+campart2("sb/ra.png",0, 0, 38679,39232, 45,205,40,205, 0.3, 0.3,0);
+campart2("sb/ra.png",0, 0, 39232,39311, 40,205,40,45, 0.3, 0.3,0);
+campart2("sb/ra.png",0, 0, 39311,39469, 40,45,37,45, 0.3, 0.3,0);
+bye("sb/ra.png",39469,37,45,0.3,0.001); 
+
+campartreal("sb/shi2.png",0, 0, 36627,36706, 620,205,620,205, 0.3, 0.3,0,36627 );
+campart2("sb/shi2.png",0, 0, 36706,36785, 620,205,510,205, 0.3, 0.3,0);
+campart2("sb/shi2.png",0, 0, 36785,37337, 510,205,505,205, 0.3, 0.3,0);
+campart2("sb/shi2.png",0, 0, 37337,37416, 505,205,395,205, 0.3, 0.3,0);
+campart2("sb/shi2.png",0, 0, 37416,37969, 395,205,390,205, 0.3, 0.3,0);
+campart2("sb/shi2.png",0, 0, 37969,38048, 390,205,270,205, 0.3, 0.3,0);
+campart2("sb/shi2.png",0, 0, 38048,38600, 270,205,265,205, 0.3, 0.3,0);
+campart2("sb/shi2.png",0, 0, 38600,38679, 265,205,155,205, 0.3, 0.3,0);
+campart2("sb/shi2.png",0, 0, 38679,39232, 155,205,150,205, 0.3, 0.3,0);
+campart2("sb/shi2.png",0, 0, 39232,39311, 150,205,150,45, 0.3, 0.3,0);
+campart2("sb/shi2.png",0, 0, 39311,39469, 150,45,147,45, 0.3, 0.3,0);
+bye("sb/shi2.png",39469,147,45,0.3,0.001);
+
+
+campartreal("sb/no.png",0, 0, 36706,36785, 620,205,620,205, 0.3, 0.3,0,36785);
+campart2("sb/no.png",0, 0, 36785,37337, 620,205,615,205, 0.3, 0.3,0);
+campart2("sb/no.png",0, 0, 37337,37416, 615,205,505,205, 0.3, 0.3,0);
+campart2("sb/no.png",0, 0, 37416,37969, 505,205,500,205, 0.3, 0.3,0);
+campart2("sb/no.png",0, 0, 37969,38048, 500,205,380,205, 0.3, 0.3,0);
+campart2("sb/no.png",0, 0, 38048,38600, 380,205,375,205, 0.3, 0.3,0);
+campart2("sb/no.png",0, 0, 38600,38679, 375,205,265,205, 0.3, 0.3,0);
+campart2("sb/no.png",0, 0, 38679,39232, 265,205,260,205, 0.3, 0.3,0);
+campart2("sb/no.png",0, 0, 39232,39311, 260,205,260,45, 0.3, 0.3,0);
+campart2("sb/no.png",0, 0, 39311,39469, 260,45,257,45, 0.3, 0.3,0);
+bye("sb/no.png",39469,257,45,0.3,0.001);
+
+
+
+campartreal("sb/ban.png",0, 0, 37416,37495, 620,205,620,205, 0.3, 0.3,0,37416);
+campart2("sb/ban.png",0, 0, 37416,37969, 620,205,615,205, 0.3, 0.3,0);
+campart2("sb/ban.png",0, 0, 37969,38048, 615,205,495,205, 0.3, 0.3,0);
+campart2("sb/ban.png",0, 0, 38048,38600, 495,205,490,205, 0.3, 0.3,0);
+campart2("sb/ban.png",0, 0, 38600,38679, 490,205,380,205, 0.3, 0.3,0); 
+campart2("sb/ban.png",0, 0, 38679,39232, 380,205,375,205, 0.3, 0.3,0);
+campart2("sb/ban.png",0, 0, 39232,39311, 375,205,375,45, 0.3, 0.3,0); 
+campart2("sb/ban.png",0, 0, 39311,39469, 375,45,372,45, 0.3, 0.3,0); 
+bye("sb/ban.png",39469,372,45,0.3,0.001); 
+ 
+campartreal("sb/gou.png",0, 0, 38048,38600, 620,205,615,205, 0.3, 0.3,0,38048); 
+campart2("sb/gou.png",0, 0, 38600,38679, 615,205,505,205, 0.3, 0.3,0); 
+campart2("sb/gou.png",0, 0, 38679,39232, 505,205,500,205, 0.3, 0.3,0); 
+campart2("sb/gou.png",0, 0, 39232,39311, 500,205,500,45, 0.3, 0.3,0); 
+campart2("sb/gou.png",0, 0, 39311,39469, 500,45,497,45, 0.3, 0.3,0); 
+ bye("sb/gou.png",39469,497,45,0.3,0.001); 
+ 
+campartreal("sb/ni.png",0, 0, 38679,39232, 620,205,615,205, 0.3, 0.3,0,38679);  
+campart2("sb/ni.png",0, 0, 39232,39311, 615,205,615,45, 0.3, 0.3,0);  
+campart2("sb/ni.png",0, 0, 39311,39469, 615,45,612,45, 0.3, 0.3,0);
+bye("sb/ni.png",39469,612,45,0.3,0.001);  
+ 
+ 
+campartreal("sb/t.png",0, 0, 39311,39469, 400,205,397,205, 0.3, 0.3,0,39311); 
+campartreal("sb/e.png",0, 0, 39311,39469, 510,205,507,205, 0.3, 0.3,0,39311);
+campartreal("sb/l.png",0, 0, 39311,39469, 620,205,617,205, 0.3, 0.3,0,39311); 
+bye("sb/t.png",39469,397,205,0.3,0.001);  
+bye("sb/e.png",39469,507,205,0.3,0.001); 
+bye("sb/l.png",39469,617,205,0.3,0.001);  
+
+
+function bye(pic,end, x,y, scaler, scaler2){
+
+var image = new Sprite(pic, Foreground);
+
+image.scale(end,end+100,scaler,scaler2);
+image.move(end, end+100, x,y,x,y);
+}
+
+campart2("sb/phone.png",0, 0, 39627,39706 , 200,220,200,260, 0.85, 0.25,0);
+campart2("sb/phone.png",0, 0, 39706,39785 , 200,260,200,260, 0.25, 0.25,0);
+campart2("sb/phone.png",0, 0, 39785,40416 , 200,260,-1100,260, 0.25, 0.25,1);
+
+function scalein(pic, end, x,y,scaler,scaler2){
+var image = new Sprite(pic, Foreground);
+
+image.scale(end,end+100,scaler,scaler2);
+image.move(end, end+100, x,y,x,y);
+}
+
+scalein("sb/phonew.png",39627,220,160,0.001,0.15);
+campart2("sb/phonew.png",0, 0, 39727,39785 , 220,160,220,160, 0.15, 0.15,1);
+campart2("sb/phonew.png",0, 0, 39785,40416 , 220,160,-1080,160, 0.15, 0.15,1);
+
+campartreal("sb/line.png",0, 0, 39942,40416, 360,270,-940,270, 0.3, 0.3,1,39942); 
+campartreal("sb/beat.png",0, 0, 39942,40416, 880,270,-420,270, 0.3, 0.3,1,40100); 
+campartreal("sb/line.png",0, 0, 39942,40416, 1400,270,100,270, 0.3, 0.3,1,40258);
+campart2("sb/line.png",0, 0, 40416,40732, 100,270,100,270, 0.3, 0.3,0);
+campartreal("sb/tick.png",0, 0, 40416,40732, 520,200,520,200, 0.2, 0.2,0,40416);
+
+campart2("sb/tick.png",0,0,40732,41363,520,200,2320,200,0.2,0.2,1);
+
+
+campartreal("sb/lineg.png",0, 0, 40732,41363, 100,270,1900,270, 0.3, 0.3,1,40732);
+campartreal("sb/beatg.png",0, 0, 40732,41363, -420,270,1380,270, 0.3, 0.3,1,40890);
+campartreal("sb/lineg.png",0, 0, 40732,41363, -940,270,860,270, 0.3, 0.3,1,41048);
+campartreal("sb/phone.png",0, 0, 40732,41363, -1600,260,200,260, 0.25, 0.25,1,40495);
+campartreal("sb/greenphone.png",0, 0, 40732,41363, -1640,160,220,160, 0.15, 0.15,1,41206);
+
+
+
+campart2("sb/phone.png",0, 1.5708, 41363,41521, 200,260,200,800, 0.25, 0.7,0);
+campart2("sb/greenphone.png",0, 1.5708, 41363,41521,220,160,600,900, 0.15, 0.42,0);
+campart2("sb/phone.png",1.5708, 1.5708, 41521,43890, 200,800,220,800, 0.7, 0.7,0);
+
+campartreal("sb/ta.png",0, 0, 41521,43890, 80,100,100,100, 0.15, 0.15,0,41521);
+campartreal("sb/ma.png",0, 0, 41521,43890, 140,100,160,100, 0.15, 0.15,0,41837);
+campartreal("sb/ta.png",0, 0, 41521,43890, 200,100,220,100, 0.15, 0.15,0,42311);
+campartreal("sb/ma.png",0, 0, 41521,43890, 260,100,280,100, 0.15, 0.15,0,42469);
+
+campartreal("sb/do.png",0, 0, 41521,43890, 50,250,70,250, 0.2, 0.2,0,42942);
+campartreal("sb/n.png",0, 0, 41521,43890, 130,250,150,250, 0.2, 0.2,0,42942);
+campartreal("sb/pi.png",0, 0, 41521,43890, 210,250,230,250, 0.2, 0.2,0,43258);
+campartreal("sb/shi2.png",0, 0, 41521,43890, 290,250,310,250, 0.2, 0.2,0,43416);
+campartreal("sb/smallya2.png",0, 0, 41521,43890, 370,250,390,250, 0.2, 0.2,0,43416);
+campartreal("sb/de.png",0, 0, 41521,43890, 450,250,470,250, 0.2, 0.2,0,43574);
+campartreal("sb/ki2.png",0, 0, 41521,43890, 530,250,550,250, 0.2, 0.2,0,43732);
+campartreal("sb/ni.png",0, 0, 41521,43890, 610,250,630,250, 0.2, 0.2,0,43890);
+
+
+campart2("sb/phone.png",1.5708, 1.5708, 43890,44048, 220,800,620,800, 0.7, 0.7,0);
+
+campart2("sb/ta.png",0, 0, 43890,44048, 100,100,500,100, 0.15, 0.15,0);
+campart2("sb/ma.png",0, 0, 43890,44048, 160,100,560,100, 0.15, 0.15,0);
+campart2("sb/ta.png",0, 0, 43890,44048, 220,100,620,100, 0.15, 0.15,0);
+campart2("sb/ma.png",0, 0, 43890,44048, 280,100,680,100, 0.15, 0.15,0);
+
+campart2("sb/do.png",0, 0, 43890,44048, 70,250,470,250, 0.2, 0.2,0);
+campart2("sb/n.png",0, 0, 43890,44048, 150,250,550,250, 0.2, 0.2,0);
+campart2("sb/pi.png",0, 0, 43890,44048, 230,250,630,250, 0.2, 0.2,0);
+campart2("sb/shi2.png",0, 0, 43890,44048, 310,250,710,250, 0.2, 0.2,0);
+campart2("sb/smallya2.png",0, 0, 43890,44048, 390,250,790,250, 0.2, 0.2,0);
+campart2("sb/de.png",0, 0, 43890,44048, 470,250,870,250, 0.2, 0.2,0);
+campart2("sb/ki2.png",0, 0, 43890,44048, 550,250,950,250, 0.2, 0.2,0);
+campart2("sb/ni.png",0, 0, 43890,44048, 630,250,1030,250, 0.2, 0.2,0);
+
+campart2("sb/ta.png",0, 0, 44048,46258, 500,100,520,100, 0.15, 0.15,0);
+campart2("sb/ma.png",0, 0, 44048,46258, 560,100,580,100, 0.15, 0.15,0);
+campart2("sb/ta.png",0, 0, 44048,46258, 620,100,640,100, 0.15, 0.15,0);
+campart2("sb/ma.png",0, 0, 44048,46258, 680,100,700,100, 0.15, 0.15,0);
+
+campart2("sb/do.png",0, 0, 44048,46258, 470,250,490,250, 0.2, 0.2,0);
+campart2("sb/n.png",0, 0, 44048,46258, 550,250,570,250, 0.2, 0.2,0);
+campart2("sb/pi.png",0, 0, 44048,46258, 630,250,650,250, 0.2, 0.2,0);
+campart2("sb/shi2.png",0, 0, 44048,46258, 710,250,730,250, 0.2, 0.2,0);
+campart2("sb/smallya2.png",0, 0, 44048,46258, 790,250,810,250, 0.2, 0.2,0);
+campart2("sb/de.png",0, 0, 44048,46258,870,250,890,250, 0.2, 0.2,0);
+campart2("sb/ki2.png",0, 0, 44048,46258, 950,250,970,250, 0.2, 0.2,0);
+campart2("sb/ni.png",0, 0, 44048,46258, 1030,250,1050,250, 0.2, 0.2,0);
+campart2("sb/phone.png",1.5708, 1.5708, 44048,46258, 620,800,640,800, 0.7, 0.7,0);
+
+campartreal("sb/iru.png",0, 0, 44048,46258, 100,170,120,170, 0.25, 0.25,0,44048);
+campartreal("sb/smalltsu.png",0, 0, 44048,46258, 200,170,220,170, 0.25, 0.25,0,44363);
+campartreal("sb/ta.png",0, 0, 44048,46258, 300,170,320,170, 0.25, 0.25,0,44363);
+
+campartreal("sb/jou.png",0, 0, 44048,46258, 40,360,60,360, 0.2, 0.2,0,44837);
+campartreal("sb/ga.png",0, 0, 44048,46258, 120,360,140,360, 0.2, 0.2,0,44995);
+campartreal("sb/i.png",0, 0, 44048,46258, 200,360,220,360, 0.2, 0.2,0,45311);
+campartreal("sb/ta.png",0, 0, 44048,46258, 280,360,300,360, 0.2, 0.2,0,45469);
+campartreal("sb/n2.png",0, 0, 44048,46258, 360,360,380,360, 0.2, 0.2,0,45469);
+campartreal("sb/de.png",0, 0, 44048,46258, 440,360,460,360, 0.2, 0.2,0,45785);
+
+
+campart2("sb/phone.png",1.5708, 1.5708, 46258,46416, 640,800,1260,1200, 0.7, 0.7,1);
+campart2("sb/ta.png",0, 0, 46258,46416, 520,100,1140,500, 0.15, 0.15,1);
+campart2("sb/ma.png",0, 0, 46258,46416, 580,100,1200,500, 0.15, 0.15,1);
+campart2("sb/ta.png",0, 0, 46258,46416, 640,100,1260,500, 0.15, 0.15,1);
+campart2("sb/ma.png",0, 0, 46258,46416, 700,100,1320,500, 0.15, 0.15,1);
+
+campart2("sb/do.png",0, 0, 46258,46416, 490,250,1110,550, 0.2, 0.2,1);
+campart2("sb/n.png",0, 0, 46258,46416, 570,250,1190,550, 0.2, 0.2,1);
+campart2("sb/pi.png",0, 0, 46258,46416, 650,250,1270,550, 0.2, 0.2,1);
+campart2("sb/shi2.png",0, 0, 46258,46416, 730,250,1350,550, 0.2, 0.2,1);
+campart2("sb/smallya2.png",0, 0, 46258,46416, 810,250,1430,550, 0.2, 0.2,1);
+campart2("sb/de.png",0, 0, 46258,46416,890,250,1510,550, 0.2, 0.2,1);
+campart2("sb/ki2.png",0, 0, 46258,46416, 970,250,1590,550, 0.2, 0.2,1);
+campart2("sb/ni.png",0, 0, 46258,46416, 1050,250,1670,550, 0.2, 0.2,1);
+
+
+campart2("sb/iru.png",0, 0, 46258,46416, 120,170,740,470, 0.25, 0.25,1);
+campart2("sb/smalltsu.png",0, 0, 46258,46416, 220,170,840,470, 0.25, 0.25,1);
+campart2("sb/ta.png",0, 0, 46258,46416, 320,170,940,470, 0.25, 0.25,1);
+
+
+campart2("sb/jou.png",0, 0, 46258,46416, 60,360,680,760, 0.2, 0.2,1);
+campart2("sb/ga.png",0, 0, 46258,46416, 140,360,740,760, 0.2, 0.2,1);
+campart2("sb/i.png",0, 0, 46258,46416, 220,360,800,760, 0.2, 0.2,1);
+campart2("sb/ta.png",0, 0, 46258,46416, 300,360,880,760, 0.2, 0.2,1);
+campart2("sb/n2.png",0, 0, 46258,46416, 380,360,960,760, 0.2, 0.2,1);
+campart2("sb/de.png",0, 0, 46258,46416, 460,360,1040,760, 0.2, 0.2,1);
+
+campartreal("sb/mune.png",0, 0,46416,46732,220,240,220,240, 0.3, 0.3,0,46416);
+campartreal("sb/no.png",0, 0, 46416,46732,340,240,340,240, 0.3, 0.3,0,46732);
+campart2("sb/mune.png",0, 0, 46732,46890,220,240,-50,420, 0.3, 0.15,0);
+campart2("sb/no.png",0, 0, 46732,46890,340,240,10,420, 0.3, 0.15,0);
+campart2("sb/mune.png",0, 0, 46890,47442,-50,420,-60,420, 0.15, 0.15,0);
+campart2("sb/no.png",0, 0, 46890,47442,10,420,0,420, 0.15, 0.15,0);
+
+campartreal("sb/dai.png",0, 0, 46890,47442,200,300,190,300, 0.7, 0.7,0,46890);
+
+campart2("sb/mune.png",0, 0, 47442,47521,-60,420,-200,420, 0.15, 0.15,0);
+campart2("sb/no.png",0, 0, 47442,47521,0,420,-140,420, 0.15, 0.15,0);
+
+campart2("sb/dai.png",0, 0, 47442,47521,190,300,50,300, 0.7, 0.7,0);
+
+
+campart2("sb/mune.png",0, 0, 47521,47995,-200,420,-210,420, 0.15, 0.15,0);
+campart2("sb/no.png",0, 0, 47521,47995,-140,420,-150,420, 0.15, 0.15,0);
+campart2("sb/dai.png",0, 0, 47521,47995,50,300,40,300, 0.7, 0.7,0);
+
+campartreal("sb/ki.png",0, 0, 47521,47995,300,300,290,300, 0.7, 0.7,0,47521);
+campartreal("sb/i.png",0, 0, 47521,47995,550,300,540,300, 0.7, 0.7,0,47521);
+campart2("sb/dai.png",0, 0, 47995,48153,40,300,-650,200, 0.7, 1.3,0);
+campart2("sb/ki.png",0, 0, 47995,48153,290,300,-400,200, 0.7,  1.3,0);
+campart2("sb/i.png",0, 0, 47995,48153,540,300,0,200, 0.7,  1.3,0);
+
+campart2("sb/i.png",0, 0, 48153,49258,0,200,-10,200, 1.3,  1.3,0);
+
+campartreal("sb/hou.png",0, 0, 48153,49258,330,370,320,370, 0.2, 0.2,0,48153);
+campartreal("sb/wo.png",0, 0, 48153,49258,410,370,400,370, 0.2, 0.2,0,48785);
+
+campart2("sb/hou.png",0, 0, 49258,49416,320,370,-50,370, 0.2, 0.2,0);
+campart2("sb/wo.png",0, 0, 49258,49416,400,370,30,370, 0.2, 0.2,0);
+campart2("sb/i.png",0, 0, 49258,49416,-10,200,-530,200, 1.3,  1.3,0);
+
+campart2("sb/hou.png",0, 0, 49416,49732,-50,370,-60,370, 0.2, 0.2,0);
+campart2("sb/wo.png",0, 0, 49416,49732,30,370,20,370, 0.2, 0.2,0);
+
+campartreal("sb/c.png",0, 0, 49416,49732,110,370,100,370, 0.2, 0.2,0,49416);
+campartreal("sb/h.png",0, 0, 49416,49732,170,370,160,370, 0.2, 0.2,0,49416);
+campartreal("sb/o.png",0, 0, 49416,49732,230,370,220,370, 0.2, 0.2,0,49416);
+campartreal("sb/i2.png",0, 0, 49416,49732,290,370,280,370, 0.2, 0.2,0,49416);
+campartreal("sb/c2.png",0, 0, 49416,49732,340,370,330,370, 0.2, 0.2,0,49416);
+campartreal("sb/e2.png",0, 0, 49416,49732,400,370,390,370, 0.2, 0.2,0,49416);
+
+function campartmeasure(pic,inirotater, rotater, start, end, x,y,z,a, scaler, scaler2,ease, fadein ){
+
+var image = new Sprite(pic, Foreground);
+
+image.fade(start-9000, 0);
+image.fade(fadein-50,fadein,0,1);
+
+image.scaleVec(start-200,start-100,1,1,0.15,1);
+image.rotate(start,inirotater);
+image.scale(start,scaler);
+image.move(ease,start, end, x,y,z,a);
+
+image.rotate(start,end,inirotater,rotater);
+
+image.scale(fadein,end,scaler,scaler2);
+
+}
+
+function campart2measure(pic,inirotater, rotater, start, end, x,y,z,a, scaler, scaler2, ease ){
+
+var image = new Sprite(pic, Foreground);
+
+image.scale(start,0.15);
+image.scaleVec(start,end,scaler,1,scaler2,1);
+image.move(ease,start, end, x,y,z,a);
+
+image.rotate(start,end,inirotater,rotater);
+
+
+
+}
+
+
+campartreal("sb/font/eng/a.png",0,0,49574,49732,590,260,585,260,0.3,0.3,0,49574);
+
+campart2("sb/hou.png",0, 0, 49732,49890,-60,370,-460,390, 0.2, 0.15,0);
+campart2("sb/wo.png",0, 0, 49732,49890,20,370,-380,390, 0.2, 0.15,0);
+
+campart2("sb/c.png",0, 0, 49732,49890,100,370,-150,390, 0.2, 0.15,0);
+campart2("sb/h.png",0, 0, 49732,49890,160,370,-110,390, 0.2, 0.15,0);
+campart2("sb/o.png",0, 0, 49732,49890,220,370,-70,390, 0.2, 0.15,0);
+campart2("sb/i2.png",0, 0, 49732,49890,280,370,-30,390, 0.2, 0.15,0);
+campart2("sb/c2.png",0, 0, 49732,49890,330,370,10,390, 0.2, 0.15,0);
+campart2("sb/e2.png",0, 0, 49732,49890,390,370,50,390, 0.2, 0.15,0);
+campart2("sb/font/eng/a.png",0, 0, 49732,49890,585,260,200,320, 0.3, 0.2,0);
+
+campartreal("sb/font/eng/b.png",0,0,49890,50048,500,270,490,270,0.3,0.3,0,49890);
+
+campart2("sb/c.png",0, 0, 49890,50048,-150,390,-160,390, 0.15, 0.15,0);
+campart2("sb/h.png",0, 0, 49890,50048,-110,390,-120,390, 0.15, 0.15,0);
+campart2("sb/o.png",0, 0, 49890,50048,-70,390,-80,390, 0.15, 0.15,0);
+campart2("sb/i2.png",0, 0, 49890,50048,-30,390,-40,390, 0.15, 0.15,0);
+campart2("sb/c2.png",0, 0, 49890,50048,10,390,00,390, 0.15, 0.15,0);
+campart2("sb/e2.png",0, 0, 49890,50048,50,390,40,390, 0.15, 0.15,0);
+campart2("sb/font/eng/a.png",0, 0, 49890,50048,200,320,190,320, 0.2, 0.2,0);
+
+
+campart2("sb/font/eng/b.png",0,0,50048,50206,490,270,230,320,0.3,0.2,0);
+campart2("sb/c.png",0, 0, 50048,50206,-160,390,-240,400, 0.15, 0.1,0);
+campart2("sb/h.png",0, 0, 50048,50206,-120,390,-220,400, 0.15, 0.1,0);
+campart2("sb/o.png",0, 0, 50048,50206,-80,390,-115,400, 0.15, 0.1,0);
+campart2("sb/i2.png",0, 0, 50048,50206,-40,390,-90,400, 0.15, 0.1,0);
+campart2("sb/c2.png",0, 0, 50048,50206,0,390,-65,400, 0.15, 0.1,0);
+campart2("sb/e2.png",0, 0, 50048,50206,40,390,-40,400, 0.15, 0.1,0);
+
+
+campart2("sb/font/eng/a.png",0, 0, 50048,50206,190,320,40,360, 0.2, 0.12,0);
+campartreal("sb/font/eng/c.png",0,0,50206,50363,490,270,480,270,0.3,0.3,0,50206);
+
+
+campart2("sb/font/eng/a.png",0, 0, 50206,50363,40,360,30,360, 0.12, 0.12,0);
+campart2("sb/font/eng/b.png",0,0,50206,50363,230,320,220,320,0.2,0.2,0);
+campart2("sb/c.png",0, 0, 50206,50363,-240,400,-250,400, 0.1, 0.1,0);
+campart2("sb/h.png",0, 0, 50206,50363,-220,400,-230,400, 0.1, 0.1,0);
+campart2("sb/o.png",0, 0, 50206,50363,-115,400,-125,400, 0.1, 0.1,0);
+campart2("sb/i2.png",0, 0, 50206,50363,-90,400,-100,400, 0.1, 0.1,0);
+campart2("sb/c2.png",0, 0, 50206,50363,-65,400,-75,400, 0.1, 0.1,0);
+campart2("sb/e2.png",0, 0, 50206,50363,-40,400,-50,400, 0.1, 0.1,0);
+
+
+function swingin(pic, start, end, x,y, scaler, scaler2, ease, fadetime, posit ){
+
+var image = new Sprite(pic, Foreground);
+
+image.fade(fadetime-100,fadetime-50,0,1);
+image.scaleVec(fadetime-100,fadetime,scaler,0,scaler2,0.15);
+image.move(ease,start, fadetime-100, x,y,x,y);
+image.move(ease,fadetime-100, fadetime, x,y,x,y+posit);
+image.move(ease,end, fadetime, x,y+posit,x,y+posit);
+
+}
+
+function swingin2(pic, start, end, x,y, scaler, scaler2, ease, fadetime, posit ){
+
+var image = new Sprite(pic, Foreground);
+
+image.fade(fadetime-100,fadetime-50,0,1);
+image.scaleVec(fadetime-100,fadetime,scaler,0,scaler2,0.15);
+image.move(ease,start, fadetime-100, x,y,x,y);
+image.move(ease,fadetime-100, fadetime, x,y,x,y+posit);
+image.move(ease,fadetime,fadetime+50, x,y+posit,x,y+posit+30);
+image.move(ease,fadetime+50,fadetime+100, x,y+posit+30,x,y+posit);
+image.move(ease,fadetime+100,end, x,y+posit,x,y+posit);
+
+
+}
+
+function swingin3(pic, start, end, x,y, scaler, scaler2, ease, fadetime, posit ){
+
+var image = new Sprite(pic, Foreground);
+
+image.fade(fadetime-100,fadetime-50,0,1);
+image.scaleVec(fadetime-100,fadetime,scaler,0,scaler2,0.15);
+image.move(ease,start, fadetime-100, x,y,x,y);
+image.move(ease,fadetime-100, fadetime, x,y,x,y+posit);
+image.move(ease,fadetime,fadetime+50, x,y+posit,x,y+posit+30);
+image.scaleVec(fadetime,fadetime+100,scaler,0.15,scaler2,0);
+image.move(ease,fadetime,fadetime+100, x,y+posit,x,y+posit+posit);
+image.fade(fadetime+50,fadetime+100,1,0);
+}
+
+function swingin4(pic, start, end, x,y, scaler, scaler2, ease, fadetime, posit ){
+
+var image = new Sprite(pic, Foreground);
+
+image.fade(fadetime-100,fadetime-50,0,1);
+image.scaleVec(fadetime-100,fadetime,scaler,0,scaler2,0.15);
+image.move(ease,start, fadetime-100, x,y,x,y);
+image.move(ease,fadetime-100, fadetime, x,y,x,y+posit);
+
+
+image.move(ease,fadetime+100,end, x,y+posit,x,y+posit);
+
+
+}
+swingin("sb/bracket1.png", 51942, 54153, -40,330,0.15, 0.15,0,51942,-65);
+swingin("sb/kami.png", 51942, 54153, 30,330,0.15, 0.15,0,51942,-65);
+swingin("sb/gata.png", 51942, 54153, 100,330,0.15, 0.15,0,52574,-65);
+swingin("sb/shi2.png", 51942, 54153, 170,330,0.15, 0.15,0,53206,-65);
+swingin("sb/smallyo2.png", 51942, 54153, 240,330,0.15, 0.15,0,53206,-65);
+swingin("sb/long.png", 51942, 54153, 310,330,0.1, 0.15,0,53679,-65);
+swingin("sb/to2.png", 51942, 54153, 380,330,0.1, 0.15,0,53679,-65);
+swingin("sb/de.png", 51942, 54153, 450,330,0.1, 0.15,0,53837,-65);
+
+swingin2("sb/sume.png", 54311, 56837, -40,60,0.15, 0.15,0,54311,125);
+swingin2("sb/me.png", 54311, 56837, 30,60,0.15, 0.15,0,54469,125);
+swingin2("sb/n.png", 54311, 56837, 100,60,0.15, 0.15,0,54469,125);
+swingin2("sb/no.png", 54311, 56837, 170,60,0.15, 0.15,0,54942,125);
+swingin2("sb/ga.png", 54311, 56837, 240,60,0.15, 0.15,0,55100,125);
+swingin2("sb/toku.png", 54311, 56837, 310,60,0.15, 0.15,0,55574,125);
+swingin2("sb/i4.png", 54311, 56837, 380,60,0.15, 0.15,0,55574,125);
+swingin2("sb/na.png", 54311, 56837, 450,60,0.15, 0.15,0,56048,125);
+swingin3("sb/jou2.png", 54311, 56837, 520,60,0.15, 0.15,0,56206,125);
+swingin4("sb/jou2.png", 54311, 56837, 520,60,0.15, 0.15,0,56679,125);
+
+
+campart2("sb/bracket1.png",0, 0, 54153,54390,-40,265,-40,265, 0.15, 0.15,0);
+campart2("sb/kami.png",0, 0, 54153,54548,30,265,30,265, 0.15, 0.15,0);
+campart2("sb/gata.png",0, 0, 54153,54548,100,265,100,265, 0.15, 0.15,0);
+campart2("sb/shi2.png",0, 0, 54153,55021,170,265,170,265, 0.15, 0.15,0);
+campart2("sb/smallyo2.png",0, 0, 54153,55179,240,265,240,265, 0.15, 0.15,0);
+campart2("sb/long.png",0, 0, 54153,55653,310,265,310,265, 0.15, 0.15,0);
+campart2("sb/to2.png",0, 0, 54153,55653,380,265,380,265, 0.15, 0.15,0);
+campart2("sb/de.png",0, 0, 54153,56127,450,265,450,265, 0.15, 0.15,0);
+
+campart2("sb/bracket1.png",0, -0.1, 54390,54785,-40,265,-40,335, 0.15, 0.15,1);
+campart2("sb/kami.png",0, 0.04, 54548,54942,30,265,30,335, 0.15, 0.15,1);
+campart2("sb/gata.png",0, -0.11, 54548,54942,100,265,100,335, 0.15, 0.15,1);
+campart2("sb/shi2.png",0, 0.1, 55021,55416,170,265,170,335, 0.15, 0.15,1);
+campart2("sb/smallyo2.png",0, -0.07, 55179,55574,240,265,240,335, 0.15, 0.15,1);
+campart2("sb/long.png",0, 0.12, 55653,56048,310,265,310,335, 0.15, 0.15,1);
+campart2("sb/to2.png",0, -0.11, 55653,56048,380,265,380,335, 0.15, 0.15,1);
+campart2("sb/de.png",0, 0.16, 56127,56521,450,265,450,335, 0.15, 0.15,1);
+
+campart2("sb/bracket1.png",-0.1, -0.1, 54785,56837,-40,335,-40,335, 0.15, 0.15,1);
+campart2("sb/kami.png",0.04, 0.04, 54942,56837,30,335,30,335, 0.15, 0.15,1);
+campart2("sb/gata.png",-0.11, -0.11, 54942,56837,100,335,100,335, 0.15, 0.15,1);
+campart2("sb/shi2.png",0.1, 0.1, 55416,56837,170,335,170,335, 0.15, 0.15,1);
+campart2("sb/smallyo2.png",-0.07, -0.07, 55574,56837,240,335,240,335, 0.15, 0.15,1);
+campart2("sb/long.png",0.12, 0.12, 56048,56837,310,335,310,335, 0.15, 0.15,1);
+campart2("sb/to2.png",-0.11, -0.11, 56048,56837,380,335,380,335, 0.15, 0.15,1);
+campart2("sb/de.png",0.16, 0.16, 56521,56837,450,335,450,335, 0.15, 0.15,1);
+
+
+campart2("sb/bracket1.png",-0.1, -0.1, 56837,56916,-40,335,-40,635, 0.15, 0.15,0);
+campart2("sb/kami.png",0.04, 0.04, 56837,56916,30,335,30,635, 0.15, 0.15,0);
+campart2("sb/gata.png",-0.11, -0.11, 56837,56916,100,335,100,635, 0.15, 0.15,0);
+campart2("sb/shi2.png",0.1, 0.1, 56837,56916,170,335,170,635, 0.15, 0.15,0);
+campart2("sb/smallyo2.png",-0.07, -0.07, 56837,56916,240,335,240,635, 0.15, 0.15,0);
+campart2("sb/long.png",0.12, 0.12, 56837,56916,310,335,310,635, 0.15, 0.15,0);
+campart2("sb/to2.png",-0.11, -0.11, 56837,56916,380,335,380,635, 0.15, 0.15,0);
+campart2("sb/de.png",0.16, 0.16, 56837,56916,450,335,450,635, 0.15, 0.15,0);
+
+
+campart2("sb/sume.png",0,0, 56837,56916,-40,185,-40,485, 0.15, 0.15,0);
+campart2("sb/me.png",0,0, 56837,56916,30,185,30,485, 0.15, 0.15,0);
+campart2("sb/n.png",0,0, 56837,56916,100,185,100,485, 0.15, 0.15,0);
+campart2("sb/no.png",0,0, 56837,56916,170,185,170,485, 0.15, 0.15,0);
+campart2("sb/ka.png",0,0, 56837,56916,240,185,240,485, 0.15, 0.15,0);
+campart2("sb/toku.png",0,0, 56837,56916,310,185,310,485, 0.15, 0.15,0);
+campart2("sb/i4.png",0,0, 56837,56916,380,185,380,485, 0.15, 0.15,0);
+campart2("sb/na.png",0,0, 56837,56916,450,185,450,485, 0.15, 0.15,0);
+
+
+campartreal3("sb/ima.png",0,0,56995,61732,80,120,100,120,0.15,0.15,0,56995);
+campartreal3("sb/ka.png",0,0,56995,61732,146,120,165,120,0.15,0.15,0,57627);
+campartreal3("sb/ra2.png",0,0,56995,61732,202,120,220,120,0.15,0.15,0,57942);
+campartreal3("sb/so.png",0,0,56995,61732,263,120,280,120,0.15,0.15,0,58258);
+campartreal3("sb/chi.png",0,0,56995,61732,324,120,340,120,0.15,0.15,0,58574);
+campartreal3("sb/ra2.png",0,0,56995,61732,385,120,400,120,0.15,0.15,0,58890);
+campartreal3("sb/he.png",0,0,56995,61732,446,120,460,120,0.15,0.15,0,59206);
+
+campartreal2("sb/o2.png",0,0,56995,61732,113,320,100,320,0.15,0.15,0,59521);
+campartreal2("sb/oku.png",0,0,56995,61732,172,320,160,320,0.15,0.15,0,59837);
+campartreal2("sb/ri.png",0,0,56995,61732,231,320,220,320,0.15,0.15,0,59995);
+campartreal2("sb/ita.png",0,0,56995,61732,290,320,280,320,0.15,0.15,0,60153);
+campartreal2("sb/shi.png",0,0,56995,61732,349,320,340,320,0.15,0.15,0,60469);
+campartreal2("sb/ma.png",0,0,56995,61732,408,320,400,320,0.15,0.15,0,60627);
+campartreal2("sb/su.png",0,0,56995,61732,467,320,460,320,0.15,0.15,0,60627);
+campartreal2("sb/bracket2.png",0,0,56995,61732,526,320,520,320,0.15,0.15,0,60627);
+
+function campartreal2(pic,inirotater, rotater, start, end, x,y,z,a, scaler, scaler2,ease, fadein ){
+
+var image = new Sprite(pic, Foreground);
+
+image.fade(start-9000, 0);
+image.fade(fadein-100,fadein-50,0,1);
+
+image.rotate(start,inirotater);
+image.scale(start,scaler);
+image.move(ease,fadein, end, x,y,z,a);
+image.move(ease,fadein-100, fadein, x+300,y,x,y);
+
+image.rotate(start,end,inirotater,rotater);
+
+image.scale(fadein,end,scaler,scaler2);
+
+}
+function campartreal3(pic,inirotater, rotater, start, end, x,y,z,a, scaler, scaler2,ease, fadein ){
+
+var image = new Sprite(pic, Foreground);
+
+image.fade(start-9000, 0);
+image.fade(fadein-100,fadein-50,0,1);
+
+image.rotate(start,inirotater);
+image.scale(start,scaler);
+image.move(ease,fadein, end, x,y,z,a);
+image.move(ease,fadein-100, fadein, x-300,y,x,y);
+
+image.rotate(start,end,inirotater,rotater);
+
+image.scale(fadein,end,scaler,scaler2);
+
+}
+
+
+campart2("sb/ima.png",0,0,61732,61969 ,100,120,700+90,120,0.15,0.15,0);
+campart2("sb/ka.png",0,0,61732,61969,165,120,765+90,120,0.15,0.15,0);
+campart2("sb/ra2.png",0,0,61732,61969,220,120,820+90,120,0.15,0.15,0);
+campart2("sb/so.png",0,0,61732,61969,280,120,880+90,120,0.15,0.15,0);
+campart2("sb/chi.png",0,0,61732,61969,340,120,940+90,120,0.15,0.15,0);
+campart2("sb/ra2.png",0,0,61732,61969,400,120,1000+90,120,0.15,0.15,0);
+campart2("sb/he.png",0,0,61732,61969,460,120,1060+90,120,0.15,0.15,0);
+
+
+campart2("sb/o2.png",0,0,61732,61969,100,320,100-690,320,0.15,0.15,0);
+campart2("sb/oku.png",0,0,61732,61969,160,320,160-690,320,0.15,0.15,0);
+campart2("sb/ri.png",0,0,61732,61969,220,320,220-690,320,0.15,0.15,0);
+campart2("sb/ita.png",0,0,61732,61969,280,320,280-690,320,0.15,0.15,0);
+campart2("sb/shi.png",0,0,61732,61969,340,320,340-690,320,0.15,0.15,0);
+campart2("sb/ma.png",0,0,61732,61969,400,320,400-690,320,0.15,0.15,0);
+campart2("sb/su.png",0,0,61732,61969,460,320,460-690,320,0.15,0.15,0);
+campart2("sb/bracket2.png",0,0,61732,61969,520,320,520-690,320,0.15,0.15,0);
+
+
+
+campartreal("sb/do.png",0,0,62048,64416,400,170,390,170,0.3,0.3,0,62048);
+campartreal("sb/a.png",0,0,62048,64416,400,320,390,320,0.3,0.3,0,62048);
+
+campartreal("sb/no.png",0,0,62048,64416,60,320,50,320,0.15,0.15,0,62679);
+campartreal("sb/ake.png",0,0,62048,64416,120,320,110,320,0.15,0.15,0,63311);
+campartreal("sb/ke.png",0,0,62048,64416,180,320,170,320,0.15,0.15,0,63311);
+campartreal("sb/ta.png",0,0,62048,64416,240,320,230,320,0.15,0.15,0,63785);
+campartreal("sb/ra2.png",0,0,62048,64416,300,320,290,320,0.15,0.15,0,63942);
+
+campart2("sb/do.png",0,0,64416,64495,390,170,360,130,0.3,0.4,0);
+campart2("sb/a.png",0,0,64416,64495,390,320,360,320,0.3,0.4,0);
+
+campart2("sb/no.png",0,0,64416,64495,50,320,-100,320,0.15,0.2,0);
+campart2("sb/ake.png",0,0,64416,64495,110,320,-20,320,0.15,0.2,0);
+campart2("sb/ke.png",0,0,64416,64495,170,320,60,320,0.15,0.2,0);
+campart2("sb/ta.png",0,0,64416,64495,230,320,140,320,0.15,0.2,0);
+campart2("sb/ra2.png",0,0,64416,64495,290,320,220,320,0.15,0.2,0);
+
+campart2("sb/do.png",0,0,64495,64495,360,130,355,130,0.4,0.4,0);
+campart2("sb/a.png",0,0,64495,64495,360,320,355,320,0.4,0.4,0);
+
+campart2("sb/no.png",0,0,64495,66785,-100,320,-105,320,0.2,0.2,0);
+campart2("sb/ake.png",0,0,64495,66785,-20,320,-25,320,0.2,0.2,0);
+campart2("sb/ke.png",0,0,64495,66785,60,320,55,320,0.2,0.2,0);
+campart2("sb/ta.png",0,0,64495,66785,140,320,135,320,0.2,0.2,0);
+campart2("sb/ra2.png",0,0,64495,66785,220,320,215,320,0.2,0.2,0);
+
+campartreal("sb/waka.png",0,0,64495,66785,15,120,10,120,0.25,0.25,0,64574);
+campartreal("sb/re.png",0,0,64495,66785,115,120,110,120,0.25,0.25,0,64574);
+campartreal("sb/ta.png",0,0,64495,66785,205,120,200,120,0.25,0.25,0,64574);
+
+function doorswing(pic, start, end,en, x,y,z,a, scaler, scaler2,ease ){
+
+var image = new Sprite(pic, Foreground);
+
+
+
+image.move(ease,start, end, x,y,z,a);
+image.scaleVec(start,end, 0.4,0.4,0.0,0.5);
+image.move(ease,end, en, z,a,z-2,a);
+
+}
+doorswing("sb/do.png",64495,65679,66785,360,130,430,100,0.4,0.4,1.5);
+doorswing("sb/a.png",64495,65679,66785,360,320,430,320,0.4,0.4,1.5);
+
+
+campartreal("sb/kano.png",0,0,64495,66785,355,130,350,130,0.3,0.3,0,65758);
+campartreal("sb/jo.png",0,0,64495,66785,355,320,350,320,0.3,0.3,0,65758);
+
+
+function doorswing2(pic, start, end,en, x,y,z,a, scaler, scaler2,ease ){
+
+var image = new Sprite(pic, Foreground);
+
+
+
+image.move(ease,start, end, x,y,z,a);
+image.scaleVec(start,end, 0,0.3,0.3,0.3);
+image.move(ease,end, en, z,a,z-2,a);
+
+}
+
+function campart2fade(pic,inirotater, rotater, start, end, x,y,z,a, scaler, scaler2, ease ){
+
+var image = new Sprite(pic, Foreground);
+
+
+image.fade(start,end,1,0);
+
+image.scale(start,scaler);
+image.move(ease,start, end, x,y,z,a);
+
+image.rotate(start,end,inirotater,rotater);
+
+image.scale(start,end,scaler,scaler2);
+
+}
+function campartfade(pic,inirotater, rotater, start, end, x,y,z,a, scaler, scaler2, ease ){
+
+var image = new Sprite(pic, Foreground);
+
+
+image.fade(start,end,0,0);
+image.scale(start,scaler);
+image.move(ease,start, end, x,y,z,a);
+
+image.rotate(start,end,inirotater,rotater);
+
+image.scale(start,end,scaler,scaler2);
+
+}
+
+
+
+campart2fade("sb/no.png",0,0,66785,66942,-105,320,150,270,0.2,0.06,0);
+campart2fade("sb/ake.png",0,0,66785,66942,-25,320,180,270,0.2,0.06,0);
+campart2fade("sb/ke.png",0,0,66785,66942,55,320,210,270,0.2,0.06,0);
+campart2fade("sb/ta.png",0,0,66785,66942,135,320,240,270,0.2,0.06,0);
+campart2fade("sb/ra2.png",0,0,66785,66942,215,320,270,270,0.2,0.06,0);
+
+campart2fade("sb/waka.png",0,0,66785,66942,10,120,180,210,0.25,0.1,0);
+campart2fade("sb/re.png",0,0,66785,66942,110,120,220,210,0.25,0.1,0);
+campart2fade("sb/ta.png",0,0,66785,66942,200,120,260,210,0.25,0.1,0);
+
+campart2fade("sb/kano.png",0,0,66785,66942,350,130,320,210,0.3,0.12,0);
+campart2fade("sb/jo.png",0,0,66785,66942,350,320,320,270,0.3,0.12,0);
+
+campartfade("sb/no.png",0,0,66942,72153,150,270,150,270,0.06,0.06,0);
+campartfade("sb/ake.png",0,0,66942,72153,180,270,180,270,0.06,0.06,0);
+campartfade("sb/ke.png",0,0,66942,72153,210,270,210,270,0.06,0.06,0);
+campartfade("sb/ta.png",0,0,66942,72153,240,270,240,270,0.06,0.06,0);
+campartfade("sb/ra2.png",0,0,66942,72153,270,270,270,270,0.06,0.06,0);
+
+campartfade("sb/waka.png",0,0,66942,72153,180,210,180,210,0.1,0.1,0);
+campartfade("sb/re.png",0,0,66942,72153,220,210,220,210,0.1,0.1,0);
+campartfade("sb/ta.png",0,0,66942,72153,260,210,260,210,0.1,0.1,0);
+
+campartfade("sb/kano.png",0,0,66942,72153,320,210,320,210,0.12,0.12,0);
+campartfade("sb/jo.png",0,0,66942,72153,320,270,320,270,0.12,0.12,0);
+
+function flyingenleft(pic,rote,rote2,start,end,scaler,scaler2,ease, offset, startpos){
+
+var image = new Sprite(pic, Foreground);
+
+
+var i=start;
+var t=startpos;
+var n=end;
+for (;i<=n;i++){
+
+
+
+	var y =((0.1*t)-offset)*((0.1*t)-offset)+150;
+	var t2=t+1;
+	var y2=((0.1*t2)-offset)*((0.1*t2)-offset)+150;
+	t++;
+
+image.scale(i,scaler);
+image.move(ease,i,i+1, t,y,t2,y2);
+
+image.rotate(i,n,rote,rote2);
+
+image.scale(i,i+1,scaler,scaler2);
+
+
+
+
+	 }
+	 }
+	 
+
+flyingenleft("sb/o2.png",0,-0.5,66942,67416,0.4,0.4,0,30,150);
+flyingenleft("sb/i.png",0,-0.5,66942,67416,0.4,0.4,0,50,280);
+
+
+function flyingenright(pic,rote,rote2,start,end,scaler,scaler2,ease, offset, startpos){
+
+var image = new Sprite(pic, Foreground);
+
+
+var i=start;
+var t=startpos;
+var n=end;
+for (;i<=n;i++){
+
+
+
+	var y =((0.1*t)-offset)*((0.1*t)-offset)+150;
+	var t2=t+1;
+	var y2=((0.1*t2)-offset)*((0.1*t2)-offset)+150;
+	t--;
+
+image.scale(i,scaler);
+image.move(ease,i,i+1, t,y,t2,y2);
+
+image.rotate(i,n,rote,rote2);
+
+image.scale(i,i+1,scaler,scaler2);
+
+
+
+
+	 }
+	 }
+flyingenright("sb/o2.png",0,0.5,67258,67732,0.4,0.4,0,10,430);
+flyingenright("sb/i.png",0,0.5,67258,67732,0.4,0.4,0,30,560);
+
+function shake(pic,inirotater, rotater, start, end, x,y,z,a, scaler, scaler2,ease, fadein ){
+
+var image = new Sprite(pic, Foreground);
+var time=fadein-50;
+
+var count=0;
+image.fade(start-9000, 0);
+image.fade(fadein-50,fadein,0,1);
+image.scale(fadein-50,fadein,scaler+0.30, scaler);
+image.rotate(start,inirotater);
+image.scale(start,scaler);
+image.rotate(start,end,inirotater,rotater);
+
+image.scale(fadein,end,scaler,scaler2);
+image.move(ease,start,time, x,y,z,a);
+
+
+image.move(time,time+10,x,y,x+10,y-10);
+
+image.move(time+10,time+20,x,y,x-20,y);
+
+image.move(time+20,time+30,x,y,x+10,y-10);
+
+image.move(time+30,time+50,x,y,x,y+20);
+image.move(time+50,end,x,y,x,y);
+}
+
+shake("sb/ko.png",-0.4,-0.4,68048,68837,50,280,50,280,0.4,0.4,0,68048);
+shake("sb/i.png",-0.4,-0.4,68048,68837,180,220,180,220,0.4,0.4,0,68048);
+shake("sb/tsu.png",-0.4,-0.4,68048,68837,310,160,310,160,0.4,0.4,0,68048);
+shake("sb/wa.png",-0.4,-0.4,68048,68837,440,100,440,100,0.4,0.4,0,68048);
+
+
+campart2("sb/wa.png",-0.4, -2,68837, 68916,440,100,40,220,0.4,0.45,0);
+campart2("sb/tsu.png",-0.4, -2,68837, 68916,310,160,110,370,0.4,0.45,0);
+campart2("sb/i.png",-0.4, -2,68837, 68916,180,220,180,520,0.4,0.45,0);
+campart2("sb/ko.png",-0.4, -2,68837, 68916,50,280,250,670,0.4,0.45,0);
+
+campart2("sb/wa.png",-2, -2,68916, 69469,40,220,40,220,0.45,0.45,0);
+campart2("sb/tsu.png",-2, -2,68916, 69469,110,370,110,370,0.45,0.45,0);
+campart2("sb/i.png",-2, -2,68916, 69469,180,520,180,520,0.45,0.45,0);
+campart2("sb/ko.png",-2, -2,68916, 69469,250,670,250,670,0.45,0.45,0);
+
+
+shake("sb/long.png",0.2,0.2,68995,69469,310,110,310,110,0.5,0.5,0,68995);
+shake("sb/shin.png",0.2,0.2,69311,69469,540,170,540,170,0.5,0.5,0,69311);
+
+campart2("sb/wa.png",-2, 1,69469, 69548,40,220,590,360,0.45,0.3,0);
+campart2("sb/tsu.png",-2, 1,69469, 69548,110,370,520,260,0.45,0.3,0);
+campart2("sb/i.png",-2, 1,69469, 69548,180,520,450,160,0.45,0.3,0);
+campart2("sb/ko.png",-2, 1,69469, 69548,250,670,380,60,0.45,0.3,0);
+
+campart2("sb/long.png",0.2, 3.2,69469, 69548,310,110,390,440,0.5,0.35,0);
+campart2("sb/shin.png",0.2, 3.2,69469, 69548,540,170,230,430,0.5,0.35,0);
+
+campart2("sb/wa.png",1, 1,69548, 71521,590,360,590,360,0.3,0.3,0);
+campart2("sb/tsu.png",1, 1,69548, 71521,520,260,520,260,0.3,0.3,0);
+campart2("sb/i.png",1, 1,69548, 71521,450,160,450,160,0.3,0.3,0);
+campart2("sb/ko.png",1, 1,69548, 71521,380,60,380,60,0.3,0.3,0);
+
+campart2("sb/long.png",3.2, 3.2,69548, 71521,390,440,390,440,0.35,0.35,0);
+campart2("sb/shin.png",3.2, 3.2,69548, 71521,230,430,230,430,0.35,0.35,0);
+
+shake("sb/tai.png",-0.2,-0.2,69627,71521,40,160,40,160,0.4,0.4,0,69627);
+shake("sb/no.png",-0.2,-0.2,69627,71521,200,140,200,140,0.4,0.4,0,69942);
+
+shake("sb/jou3.png",-0.15,-0.15,69627,71521,20,320,20,320,0.3,0.3,0,70100);
+shake("sb/dan.png",-0.15,-0.15,69627,71521,160,290,160,290,0.3,0.3,0,70416);
+shake("sb/da2.png",-0.15,-0.15,69627,71521,300,260,300,260,0.3,0.3,0,70732);
+
+
+
+
+
+
+
+
+
+
+
+function bg(image,start,end,r,g,b){
+var bg=new Sprite(image, Background);
+bg.color(start,r,g,b);
+bg.move(start,end, 320,320,320,320);
+}
+bg("sb/fullscreen.jpg",0,10732,0,168,236);
+
+function introup(pic,inirotater, rotater, start, end, x,y,z,a, scaler, scaler2,ease, fadein ){
+
+var image = new Sprite(pic, Foreground);
+
+image.rotate(start,inirotater);
+image.scale(start,scaler);
+image.move(ease,fadein, end, x,y,z,a);
+image.move(ease,fadein-100, fadein, x,y+300,x,y);
+image.move(ease,end, end+100,z,a,z,y-300);
+
+image.rotate(start,end,inirotater,rotater);
+
+image.scale(fadein,end,scaler,scaler2);
+
+}
+
+function introdown(pic,inirotater, rotater, start, end, x,y,z,a, scaler, scaler2,ease, fadein ){
+
+var image = new Sprite(pic, Foreground);
+
+image.rotate(start,inirotater);
+image.scale(start,scaler);
+image.move(ease,fadein, end, x,y,z,a);
+image.move(ease,fadein-100, fadein, x,y-300,x,y);
+image.move(ease,end, end+100,z,a,z,y+300);
+
+image.rotate(start,end,inirotater,rotater);
+
+image.scale(fadein,end,scaler,scaler2);
+
+}
+introup("sb/a.png",0,0,785,2995,220,250,220,230,0.2,0.2,0,785);
+introdown("sb/a.png",0,0,785,2995,440,230,440,250,0.2,0.2,0,785);
+
+introup("sb/a.png",0,0,3311,5521,220,250,220,230,0.2,0.2,0,3311);
+introdown("sb/a.png",0,0,3311,5521,440,230,440,250,0.2,0.2,0,3311);
+
+introup("sb/a.png",0,0,5837,8048,220,250,220,230,0.2,0.2,0,5837);
+introdown("sb/a.png",0,0,5837,8048,440,230,440,250,0.2,0.2,0,5837);
+
+function circlein(pic,start,end,r,g,b,scalee){
+var circle=new Sprite(pic,Background);
+circle.scale(start,end,0,scalee);
+circle.color(start,r,g,b);
+circle.move(start,end,320,240,320,240);
+}
+
+function circleout(pic,start,end,r,g,b,scalee){
+var circle=new Sprite(pic,Background);
+circle.scale(start,end,scalee,0);
+circle.color(start,r,g,b);
+circle.move(start,end,320,240,320,240);
+}
+bgstay("sb/circle.png",19732,20995,320,240,2,220,0,120);
+bgstay("sb/circle.png",19890,20679,320,240,1.3,0,220,220);
+//bgstay("sb/font/1.png",20521,20679,320,240,0.5,255,255,255);
+bgstay("sb/circle.png",20048,20521,320,240,0.8,255,120,70);
+//bgstay("sb/font/2.png",20206,20521,320,240,0.5,255,255,255);
+bgstay("sb/circle.png",20206,20363,320,240,0.5,70,255,120);
+//bgstay("sb/font/3.png",20521,20363,320,240,0.5,255,255,255);
+
+//circlein("sb/font/3.png",20285,20363,255,255,255,0.5);
+circleout("sb/circle.png",20363,20521,70,255,120,0.5);
+//circleout("sb/font/3.png",20363,20521,255,255,255,0.5);
+
+circleout("sb/circle.png",20521,20679,255,120,70,0.8);
+//circleout("sb/font/2.png",20521,20679,255,255,255,0.5);
+
+circleout("sb/circle.png",20679,20837,0,220,220,1.3);
+//circleout("sb/font/1.png",20679,20837,255,255,255,0.5);
+
+circlein("sb/circle.png",20127,20206,70,255,120,0.5);
+circlein("sb/circle.png",19969,20048,255,120,70,0.8);
+circlein("sb/circle.png",19811,19890,0,220,220,1.3);
+circlein("sb/circle.png",19653,19732,220,0,120,2);
+
+
+
+function bgstay(pic,start, end, x,y, scaler,r,g,b){
+
+var image = new Sprite(pic, Background);
+
+image.color(start,r,g,b);
+image.scale(start,scaler);
+image.move(start, end, x,y,x,y);
+
+}
+
